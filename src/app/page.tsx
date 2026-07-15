@@ -13,7 +13,9 @@ export default function Home() {
       <div id="features">
         <Features />
       </div>
-      <CounsellingImpact />
+        <div id="partners">
+        <Partners />
+      </div>
       
       {/* Section Divider */}
       <div className="relative py-8 bg-gray-50 overflow-hidden">
@@ -31,9 +33,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="partners">
-        <Partners />
-      </div>
+     <CounsellingImpact />
       <div id="testimonials">
         <Testimonials />
       </div>

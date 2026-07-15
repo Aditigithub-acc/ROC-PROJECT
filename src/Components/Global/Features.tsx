@@ -119,7 +119,7 @@ const Features = memo(() => {
                         transition={{ duration: 0.6 }}
                         className="text-[#da2929] font-black uppercase tracking-[0.3em] text-xs mb-4"
                     >
-                        Our Expertise
+                        Why Choose Us
                     </motion.p>
                     <motion.h2
                         initial={{ opacity: 0, x: -30 }}
@@ -128,7 +128,7 @@ const Features = memo(() => {
                         transition={{ duration: 0.8, delay: 0.1 }}
                         className="text-4xl lg:text-6xl font-black text-gray-900 tracking-tighter"
                     >
-                        Services We <span className="text-[#da2929]">Provide.</span>
+                        Why <span className="text-[#da2929]">ROC.</span>
                     </motion.h2>
                 </div>
 

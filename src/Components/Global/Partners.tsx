@@ -27,7 +27,7 @@ const Partners = memo(() => {
                     viewport={{ once: true }}
                     className="text-[#da2929] font-black uppercase tracking-[0.3em] text-[10px] mb-4"
                 >
-                    Our Network
+                    Our Partners
                 </motion.p>
                 <motion.h2 
                     initial={{ opacity: 0, y: 10 }}

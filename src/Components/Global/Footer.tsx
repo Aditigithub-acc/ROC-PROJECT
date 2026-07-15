@@ -69,7 +69,7 @@ const Footer = memo(() => {
                 {/* Copyright */}
                 <div className="pt-8 border-t border-white/10 w-full flex flex-col items-center gap-4 text-center">
                     <p className="text-white/40 text-[10px] tracking-[0.3em] font-black uppercase">
-                        &copy; {new Date().getFullYear()} EDUCAREER. ALL RIGHTS RESERVED.
+                        &copy; {new Date().getFullYear()} ROC. ALL RIGHTS RESERVED.
                     </p>
                     <div className="flex space-x-8">
                         <Link href="/privacy" className="text-white/30 hover:text-white text-[9px] tracking-widest uppercase transition-colors">Privacy Policy</Link>
