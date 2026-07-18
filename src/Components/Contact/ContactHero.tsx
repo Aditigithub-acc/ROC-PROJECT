@@ -9,6 +9,8 @@ const countries = [
     "India", "Germany", "France", "UAE", "Singapore", "Other"
 ];
 
+type SubmitStatus = "idle" | "loading" | "success" | "error";
+
 const ContactHero = () => {
     const [formData, setFormData] = useState({
         fullName: "",
@@ -18,16 +20,45 @@ const ContactHero = () => {
         message: "",
     });
 
+    const [status, setStatus] = useState<SubmitStatus>("idle");
+    const [errorMsg, setErrorMsg] = useState("");
+
     const handleChange = (
         e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
     ) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        console.log(formData);
-        // add your submit logic here (API call, etc.)
+        setStatus("loading");
+        setErrorMsg("");
+
+        try {
+            const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData),
+            });
+
+            const data = await res.json();
+
+            if (!res.ok) {
+                throw new Error(data.error || "Something went wrong.");
+            }
+
+            setStatus("success");
+            setFormData({
+                fullName: "",
+                email: "",
+                phone: "",
+                country: "",
+                message: "",
+            });
+        } catch (err) {
+            setStatus("error");
+            setErrorMsg(err instanceof Error ? err.message : "Something went wrong.");
+        }
     };
 
     return (
@@ -80,6 +111,7 @@ const ContactHero = () => {
                                 <input
                                     type="text"
                                     name="fullName"
+                                    required
                                     value={formData.fullName}
                                     onChange={handleChange}
                                     placeholder="John Doe"
@@ -91,6 +123,7 @@ const ContactHero = () => {
                                 <input
                                     type="email"
                                     name="email"
+                                    required
                                     value={formData.email}
                                     onChange={handleChange}
                                     placeholder="john@example.com"
@@ -140,6 +173,7 @@ const ContactHero = () => {
                             <textarea
                                 name="message"
                                 rows={4}
+                                required
                                 value={formData.message}
                                 onChange={handleChange}
                                 placeholder="Tell us about your academic goals..."
@@ -147,10 +181,27 @@ const ContactHero = () => {
                             />
                         </div>
 
-                        <button type="submit" className="w-full group relative overflow-hidden bg-gray-900 text-white rounded-lg py-5 transition-transform active:scale-[0.98]">
+                        <button
+                            type="submit"
+                            disabled={status === "loading"}
+                            className="w-full group relative overflow-hidden bg-gray-900 text-white rounded-lg py-5 transition-transform active:scale-[0.98] disabled:opacity-60 disabled:cursor-not-allowed"
+                        >
                             <div className="absolute inset-0 bg-[#da2929] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" />
-                            <span className="relative z-10 text-xs font-black uppercase tracking-[0.3em]">Send Message</span>
+                            <span className="relative z-10 text-xs font-black uppercase tracking-[0.3em]">
+                                {status === "loading" ? "Sending..." : "Send Message"}
+                            </span>
                         </button>
+
+                        {status === "success" && (
+                            <p className="text-center text-sm font-medium text-green-600">
+                                Thanks! Your message has been sent — we&apos;ll be in touch soon.
+                            </p>
+                        )}
+                        {status === "error" && (
+                            <p className="text-center text-sm font-medium text-red-600">
+                                {errorMsg}
+                            </p>
+                        )}
 
                         <p className="text-center text-[10px] text-gray-300 font-medium">
                             By submitting, you agree to our <span className="underline cursor-pointer hover:text-gray-400 transition-colors">Privacy Policy</span> and <span className="underline cursor-pointer hover:text-gray-400 transition-colors">Terms of Service</span>.
