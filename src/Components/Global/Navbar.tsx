@@ -55,7 +55,7 @@ const Navbar = memo(() => {
                 <div className="flex items-center gap-2 relative group flex-shrink-0">
                     <div className={`relative overflow-hidden transition-all duration-500 ${scrolled ? 'w-40 h-12' : 'w-56 h-16 lg:w-64 lg:h-18'}`}>
                         <Image
-                            src="/logo.png"
+                            src="/image.png"
                             alt="Logo"
                             fill
                             className="object-contain"
