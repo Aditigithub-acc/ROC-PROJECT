@@ -1,7 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { SplitText } from "./SplitText";
+
 import { memo } from "react";
 
 const Hero = memo(() => {
