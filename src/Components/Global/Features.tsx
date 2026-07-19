@@ -131,16 +131,16 @@ const ServiceCard = memo(({ service, index }: { service: ServiceItem; index: num
 
     useEffect(() => {
         if (!isInView) return;
-        
+
         // Different rotation speed/delay per card so they aren't synced
         const intervalTime = 4000 + (index * 800); // Cards switch at different intervals
         const delayTime = index * 600; // Cards start switching at different times
-        
+
         const timeout = setTimeout(() => {
             const interval = setInterval(() => {
                 setCurrentIndex((prev) => (prev + 1) % service.contents.length);
             }, intervalTime);
-            
+
             return () => clearInterval(interval);
         }, delayTime);
 
@@ -182,15 +182,14 @@ const ServiceCard = memo(({ service, index }: { service: ServiceItem; index: num
                 </AnimatePresence>
                 {/* Subtle overlay gradient */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-                
+
                 {/* Progress Indicators */}
                 <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 z-20">
                     {service.contents.map((_, i) => (
-                        <div 
-                            key={i} 
-                            className={`h-1.5 rounded-full transition-all duration-500 ${
-                                i === currentIndex ? "w-4 bg-white" : "w-1.5 bg-white/50"
-                            }`} 
+                        <div
+                            key={i}
+                            className={`h-1.5 rounded-full transition-all duration-500 ${i === currentIndex ? "w-4 bg-white" : "w-1.5 bg-white/50"
+                                }`}
                         />
                     ))}
                 </div>
@@ -283,4 +282,4 @@ const Features = memo(() => {
 ServiceCard.displayName = "ServiceCard";
 Features.displayName = "Features";
 
-export default Features;
+export default Features;
