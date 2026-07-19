@@ -23,7 +23,7 @@ const Footer = memo(() => {
                     className="relative w-64 h-24 lg:w-80 lg:h-32 mb-4"
                 >
                     <Image
-                        src="https://67uzoom719.ufs.sh/f/YNNjoMX3eGAoXRiCpT7zN8RPF5aknr7V4H2CZEIYudsjGSpO"
+                        src="/image-removebg-preview(24).png"
                         alt="Educareer Logo"
                         fill
                         className="object-contain brightness-0 invert"
@@ -47,7 +47,7 @@ const Footer = memo(() => {
                                 className="flex-grow bg-transparent px-4 py-2 text-sm text-white placeholder:text-white/40 border-none focus:ring-0 focus:outline-none"
                             />
                             <button className="bg-white text-[#da2929] px-6 py-2 rounded-md cursor-pointer text-xs font-black uppercase tracking-widest hover:bg-gray-100 transition-all duration-300">
-                                Join
+                                Send
                             </button>
                         </form>
                     </div>
@@ -55,7 +55,7 @@ const Footer = memo(() => {
 
                 {/* Minimal Links */}
                 <div className="flex flex-wrap items-center justify-center gap-6 lg:gap-12 mb-12">
-                    {['Home', 'About Us', 'Gallery', "Students' Corner", 'Contact'].map((item) => (
+                    {['Home', 'Platforms', 'Our Work', "Rewards' Corner", 'Rewards Program', 'Lets Talk'].map((item) => (
                         <Link
                             key={item}
                             href="/"

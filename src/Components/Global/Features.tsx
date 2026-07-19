@@ -1,104 +1,227 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { memo, type ReactNode } from "react";
+import { motion, AnimatePresence, useInView } from "framer-motion";
+import { memo, useEffect, useRef, useState } from "react";
+
+interface CardContent {
+    title: string;
+    description: string;
+    image: string;
+}
 
 interface ServiceItem {
     number: string;
-    title: string;
-    description: string;
-    icon: ReactNode;
+    contents: CardContent[];
 }
 
 const services: ServiceItem[] = [
     {
         number: "01",
-        title: "Career Counseling",
-        description: "Personalized 1-on-1 sessions to map your career trajectory with industry experts.",
-        icon: (
-            <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-            </svg>
-        )
+        contents: [
+            {
+                title: "Career Counseling",
+                description: "Personalized 1-on-1 sessions to map your career trajectory with industry experts.",
+                image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                title: "Industry Insights",
+                description: "Learn about the latest trends and demands directly from market leaders.",
+                image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                title: "Future Mapping",
+                description: "Create a resilient career plan adaptable to the ever-changing professional landscape.",
+                image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=600&q=80"
+            }
+        ]
     },
     {
         number: "02",
-        title: "Skill Assessment",
-        description: "Comprehensive testing to identify your core strengths and areas for professional growth.",
-        icon: (
-            <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-            </svg>
-        )
+        contents: [
+            {
+                title: "Skill Assessment",
+                description: "Comprehensive testing to identify your core strengths and areas for professional growth.",
+                image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                title: "Performance Metrics",
+                description: "Data-driven approach to track and enhance your skill development over time.",
+                image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                title: "Gap Analysis",
+                description: "Identify exactly what skills you need to land your dream job efficiently.",
+                image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80"
+            }
+        ]
     },
     {
         number: "03",
-        title: "Mentorship Program",
-        description: "Connect with seasoned mentors who provide guidance, wisdom, and industry networking.",
-        icon: (
-            <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
-        )
+        contents: [
+            {
+                title: "Mentorship Program",
+                description: "Connect with seasoned mentors who provide guidance, wisdom, and industry networking.",
+                image: "https://images.unsplash.com/photo-1515161318750-781d6122e367?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                title: "Leadership Coaching",
+                description: "Develop the soft skills required to lead teams and manage complex projects.",
+                image: "https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                title: "Network Building",
+                description: "Expand your professional circle through exclusive events and introductions.",
+                image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80"
+            }
+        ]
     },
     {
         number: "04",
-        title: "Placement Support",
-        description: "Direct bridge to top employers with exclusive job opportunities and insider referrals.",
-        icon: (
-            <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-        )
+        contents: [
+            {
+                title: "Placement Support",
+                description: "Direct bridge to top employers with exclusive job opportunities and insider referrals.",
+                image: "https://images.unsplash.com/photo-1521737711867-e3cb66cb3bd6?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                title: "Resume Optimization",
+                description: "Craft a compelling narrative that gets past ATS and catches recruiter attention.",
+                image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                title: "Offer Negotiation",
+                description: "Learn strategies to secure the best possible compensation package.",
+                image: "https://images.unsplash.com/photo-1556761175-5973dc0f32b7?auto=format&fit=crop&w=600&q=80"
+            }
+        ]
     },
     {
         number: "05",
-        title: "Interview Prep",
-        description: "Mock interviews and psychological coaching to master even the most difficult rounds.",
-        icon: (
-            <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-            </svg>
-        )
+        contents: [
+            {
+                title: "Interview Prep",
+                description: "Mock interviews and psychological coaching to master even the most difficult rounds.",
+                image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                title: "Technical Rounds",
+                description: "Practice solving complex problems with feedback from senior engineers.",
+                image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                title: "Confidence Building",
+                description: "Overcome anxiety and present your best self during high-stakes interactions.",
+                image: "https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=600&q=80"
+            }
+        ]
     }
 ];
 
-const ServiceCard = memo(({ service, index }: { service: ServiceItem; index: number }) => (
-    <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6, delay: index * 0.1 }}
-        whileHover={{ y: -10 }}
-        className="group relative h-[320px] p-10 rounded-[40px] bg-white border border-gray-200/60 hover:border-[#da2929]/20 hover:shadow-[0_20px_40px_-15px_rgba(218,41,41,0.08)] transition-all duration-500 overflow-hidden w-full shadow-sm"
-    >
-        {/* Large Background Number - SLIGHT RED COLOR */}
-        <span className="absolute -bottom-6 -right-4 text-[120px] font-black text-[#da2929]/[0.05] select-none transition-all duration-500 group-hover:text-[#da2929]/10 group-hover:scale-110">
-            {service.number}
-        </span>
+const getInitialOffset = (index: number) => {
+    if (index === 2) {
+        return { x: 0, y: 40, opacity: 0, scale: 0.96 };
+    }
+    return index < 2 ? { x: -70, y: 0, opacity: 0, scale: 0.96 } : { x: 70, y: 0, opacity: 0, scale: 0.96 };
+};
 
-        {/* Icon Wrapper */}
-        <div className="relative mb-8 w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center text-[#da2929] group-hover:bg-[#da2929] group-hover:text-white group-hover:scale-110 transition-all duration-500 will-change-transform">
-            <div className="absolute inset-0 bg-[#da2929]/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <div className="relative z-10">
-                {service.icon}
+const ServiceCard = memo(({ service, index }: { service: ServiceItem; index: number }) => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const cardRef = useRef<HTMLDivElement | null>(null);
+    const isInView = useInView(cardRef, { once: true, amount: 0.2 });
+
+    useEffect(() => {
+        if (!isInView) return;
+        
+        // Different rotation speed/delay per card so they aren't synced
+        const intervalTime = 4000 + (index * 800); // Cards switch at different intervals
+        const delayTime = index * 600; // Cards start switching at different times
+        
+        const timeout = setTimeout(() => {
+            const interval = setInterval(() => {
+                setCurrentIndex((prev) => (prev + 1) % service.contents.length);
+            }, intervalTime);
+            
+            return () => clearInterval(interval);
+        }, delayTime);
+
+        return () => {
+            clearTimeout(timeout);
+        };
+    }, [isInView, index, service.contents.length]);
+
+    const currentContent = service.contents[currentIndex];
+
+    return (
+        <motion.div
+            ref={cardRef}
+            initial={getInitialOffset(index)}
+            whileInView={{ opacity: 1, x: 0, y: 0, scale: 1 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.75, delay: index * 0.12, ease: [0.22, 1, 0.36, 1] }}
+            whileHover={{ y: -10, scale: 1.01, transition: { duration: 0.3 } }}
+            className="group relative h-[420px] p-8 rounded-[40px] bg-white border border-gray-200/60 hover:border-[#da2929]/20 hover:shadow-[0_20px_40px_-15px_rgba(218,41,41,0.08)] transition-all duration-500 overflow-hidden w-full shadow-sm flex flex-col"
+        >
+            {/* Background Number */}
+            <span className="absolute -bottom-6 -right-4 text-[120px] font-black text-[#da2929]/[0.05] select-none transition-all duration-500 group-hover:text-[#da2929]/10 group-hover:scale-110 z-0">
+                {service.number}
+            </span>
+
+            {/* Image Container with AnimatePresence */}
+            <div className="relative w-full h-48 mb-6 rounded-3xl overflow-hidden shadow-sm z-10 bg-gray-100">
+                <AnimatePresence mode="wait">
+                    <motion.img
+                        key={currentContent.image}
+                        src={currentContent.image}
+                        alt={currentContent.title}
+                        initial={{ opacity: 0, scale: 1.05 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.95 }}
+                        transition={{ duration: 0.8, ease: "easeInOut" }}
+                        className="absolute inset-0 w-full h-full object-cover"
+                    />
+                </AnimatePresence>
+                {/* Subtle overlay gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                
+                {/* Progress Indicators */}
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 z-20">
+                    {service.contents.map((_, i) => (
+                        <div 
+                            key={i} 
+                            className={`h-1.5 rounded-full transition-all duration-500 ${
+                                i === currentIndex ? "w-4 bg-white" : "w-1.5 bg-white/50"
+                            }`} 
+                        />
+                    ))}
+                </div>
             </div>
-        </div>
 
-        {/* Content */}
-        <div className="relative z-10">
-            <h3 className="text-xl font-black text-gray-900 mb-4 group-hover:text-[#da2929] transition-colors duration-300">
-                {service.title}
-            </h3>
-            <p className="text-gray-500 text-sm leading-relaxed font-medium group-hover:text-gray-600 transition-colors duration-300 line-clamp-3">
-                {service.description}
-            </p>
-        </div>
+            {/* Content with AnimatePresence */}
+            <div className="relative z-10 flex-1 flex flex-col justify-start">
+                <AnimatePresence mode="wait">
+                    <motion.div
+                        key={currentContent.title}
+                        initial={{ opacity: 0, y: 15 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -15 }}
+                        transition={{ duration: 0.5, ease: "easeOut" }}
+                        className="absolute inset-0"
+                    >
+                        <h3 className="text-xl font-black text-gray-900 mb-3 group-hover:text-[#da2929] transition-colors duration-300">
+                            {currentContent.title}
+                        </h3>
+                        <p className="text-gray-500 text-sm leading-relaxed font-medium group-hover:text-gray-600 transition-colors duration-300 line-clamp-3">
+                            {currentContent.description}
+                        </p>
+                    </motion.div>
+                </AnimatePresence>
+            </div>
 
-        {/* Hover Bottom Bar */}
-        <div className="absolute bottom-0 left-0 w-full h-1 bg-[#da2929] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700" />
-    </motion.div>
-));
+            {/* Hover Bottom Bar */}
+            <div className="absolute bottom-0 left-0 w-full h-1 bg-[#da2929] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700" />
+        </motion.div>
+    );
+});
 
 const Features = memo(() => {
     return (
@@ -160,4 +283,4 @@ const Features = memo(() => {
 ServiceCard.displayName = "ServiceCard";
 Features.displayName = "Features";
 
-export default Features;
+export default Features;

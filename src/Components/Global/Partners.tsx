@@ -4,14 +4,28 @@ import { memo } from "react";
 import { motion } from "framer-motion";
 
 const partners = [
-    "University of Oxford",
-    "Stanford University",
-    "Harvard University",
-    "MIT",
-    "Cambridge University",
-    "Yale University",
-    "Princeton University",
-    "Columbia University"
+    "Amazon",
+    "Bajaj",
+    "BoAt",
+    "Cello",
+    "Cross",
+    "Faber",
+    "Havells",
+    "Jack & Jones",
+    "JBL",
+    "LG",
+    "Luxor",
+    "Nasher Miles",
+    "Pepe Jeans",
+    "Portronics",
+    "Safari",
+    "Samsung",
+    "Titan",
+    "Timex",
+    "Toreto",
+    "Welspun",
+    "Whirlpool",
+    "Wildcraft"
 ];
 
 const Partners = memo(() => {
@@ -21,7 +35,7 @@ const Partners = memo(() => {
     return (
         <section className="py-20 bg-gray-50 border-y border-gray-100 overflow-hidden">
             <div className="max-w-[1450px] mx-auto px-4 lg:px-8 mb-12 text-center">
-                <motion.p 
+                <motion.p
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -29,30 +43,30 @@ const Partners = memo(() => {
                 >
                     Our Partners
                 </motion.p>
-                <motion.h2 
+                <motion.h2
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.1 }}
                     className="text-2xl lg:text-3xl font-bold text-gray-900 tracking-tight"
                 >
-                    Trusted by <span className="text-[#da2929]">Leading</span> Academic Institutions
+                    Trusted by <span className="text-[#da2929]">Leading</span>  Brands and Partners
                 </motion.h2>
             </div>
 
             <div className="relative flex items-center group">
                 {/* Horizontal Marquee */}
-                <motion.div 
+                <motion.div
                     animate={{ x: ["0%", "-50%"] }}
-                    transition={{ 
-                        duration: 30, 
-                        repeat: Infinity, 
-                        ease: "linear" 
+                    transition={{
+                        duration: 30,
+                        repeat: Infinity,
+                        ease: "linear"
                     }}
                     className="flex items-center gap-12 lg:gap-24 whitespace-nowrap min-w-max px-12"
                 >
                     {doubledPartners.map((partner, index) => (
-                        <div 
+                        <div
                             key={index}
                             className="flex items-center gap-4 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-default"
                         >
