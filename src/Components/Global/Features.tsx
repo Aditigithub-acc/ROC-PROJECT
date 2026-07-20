@@ -19,19 +19,19 @@ const services: ServiceItem[] = [
         number: "01",
         contents: [
             {
-                title: "Career Counseling",
-                description: "Personalized 1-on-1 sessions to map your career trajectory with industry experts.",
-                image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=600&q=80"
+                title: "Cutting Edge Technology",
+                description: "Experience modern infrastructure and advanced technologies that prepare students for real-world challenges and future careers.",
+                image: "https://plus.unsplash.com/premium_photo-1661497675847-2075003562fd?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             },
             {
-                title: "Industry Insights",
-                description: "Learn about the latest trends and demands directly from market leaders.",
-                image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=600&q=80"
+                title: "Next-Generation Technology",
+                description: "Empowering learners with innovative tools, smart classrooms, and industry-focused technology for tomorrow's success.",
+                image: "https://plus.unsplash.com/premium_photo-1683121710572-7723bd2e235d?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             },
             {
-                title: "Future Mapping",
-                description: "Create a resilient career plan adaptable to the ever-changing professional landscape.",
-                image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=600&q=80"
+                title: "Advanced Technology Solutions",
+                description: "Providing state-of-the-art technology solutions that enhance learning, innovation, and practical skill development.",
+                image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             }
         ]
     },
@@ -39,19 +39,19 @@ const services: ServiceItem[] = [
         number: "02",
         contents: [
             {
-                title: "Skill Assessment",
-                description: "Comprehensive testing to identify your core strengths and areas for professional growth.",
-                image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80"
+                title: "Business Delight",
+                description: "Building future-ready professionals with practical business knowledge, leadership skills, and innovative thinking.",
+                image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             },
             {
-                title: "Performance Metrics",
-                description: "Data-driven approach to track and enhance your skill development over time.",
+                title: "Business Excellence",
+                description: "Building future-ready professionals with practical business knowledge, leadership skills, and innovative thinking.",
                 image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80"
             },
             {
-                title: "Gap Analysis",
-                description: "Identify exactly what skills you need to land your dream job efficiently.",
-                image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80"
+                title: "Business Innovation",
+                description: "Encouraging creativity, entrepreneurship, and modern business strategies to shape successful careers.",
+                image: "https://images.unsplash.com/photo-1758876203468-39e5493bfe76?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             }
         ]
     },
@@ -59,19 +59,19 @@ const services: ServiceItem[] = [
         number: "03",
         contents: [
             {
-                title: "Mentorship Program",
-                description: "Connect with seasoned mentors who provide guidance, wisdom, and industry networking.",
+                title: "Trust and Scale",
+                description: "Building trust through quality education while empowering students to achieve greater growth and long-term success.",
                 image: "https://images.unsplash.com/photo-1515161318750-781d6122e367?auto=format&fit=crop&w=600&q=80"
             },
             {
-                title: "Leadership Coaching",
-                description: "Develop the soft skills required to lead teams and manage complex projects.",
-                image: "https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=600&q=80"
+                title: "Trusted Growth",
+                description: "Fostering confidence, innovation, and academic excellence to help students grow into future-ready professionals.",
+                image: "https://images.unsplash.com/photo-1758691737138-7b9b1884b1db?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             },
             {
-                title: "Network Building",
-                description: "Expand your professional circle through exclusive events and introductions.",
-                image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80"
+                title: "Growth with Confidence",
+                description: "Empowering students with the skills, knowledge, and confidence to succeed in a rapidly evolving world.",
+                image: "https://images.unsplash.com/photo-1661437502046-54db1e6115f3?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             }
         ]
     },
@@ -79,19 +79,19 @@ const services: ServiceItem[] = [
         number: "04",
         contents: [
             {
-                title: "Placement Support",
-                description: "Direct bridge to top employers with exclusive job opportunities and insider referrals.",
-                image: "https://images.unsplash.com/photo-1521737711867-e3cb66cb3bd6?auto=format&fit=crop&w=600&q=80"
+                title: "Expertise and Results",
+                description: "Delivering exceptional knowledge, practical skills, and measurable outcomes to help students achieve academic and career success.",
+                image: "https://images.unsplash.com/photo-1758691736433-4078b93abd72?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             },
             {
-                title: "Resume Optimization",
-                description: "Craft a compelling narrative that gets past ATS and catches recruiter attention.",
-                image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=600&q=80"
+                title: "Knowledge and Excellence",
+                description: "Providing quality education, expert mentorship, and innovative learning experiences that inspire excellence.",
+                image: "https://images.unsplash.com/photo-1581094271901-8022df4466f9?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             },
             {
-                title: "Offer Negotiation",
-                description: "Learn strategies to secure the best possible compensation package.",
-                image: "https://images.unsplash.com/photo-1556761175-5973dc0f32b7?auto=format&fit=crop&w=600&q=80"
+                title: "Skills and Success",
+                description: "Equipping students with industry-relevant skills and practical experience to achieve lasting success.",
+                image: "https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             }
         ]
     },
@@ -99,19 +99,19 @@ const services: ServiceItem[] = [
         number: "05",
         contents: [
             {
-                title: "Interview Prep",
-                description: "Mock interviews and psychological coaching to master even the most difficult rounds.",
-                image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80"
+                title: "Tech Loyalty and Rewards Partner",
+                description: "Recognizing excellence through technology-driven initiatives, rewarding achievements, and fostering long-term student success.",
+                image: "https://images.unsplash.com/photo-1521790797524-b2497295b8a0?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             },
             {
-                title: "Technical Rounds",
-                description: "Practice solving complex problems with feedback from senior engineers.",
-                image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80"
+                title: "Technology and Recognition",
+                description: "Leveraging modern technology to recognize achievements, encourage innovation, and inspire continuous growth.",
+                image: "https://plus.unsplash.com/premium_photo-1683141471232-fa7f5c416231?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             },
             {
-                title: "Confidence Building",
-                description: "Overcome anxiety and present your best self during high-stakes interactions.",
-                image: "https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=600&q=80"
+                title: "Digital Rewards Network",
+                description: "Connecting students with smart digital solutions, rewarding excellence, and creating engaging learning experiences.",
+                image: "https://plus.unsplash.com/premium_photo-1683749805319-2c481ae54bc1?q=80&w=715&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             }
         ]
     }
@@ -283,4 +283,4 @@ const Features = memo(() => {
 ServiceCard.displayName = "ServiceCard";
 Features.displayName = "Features";
 
-export default Features;
+export default Features;
