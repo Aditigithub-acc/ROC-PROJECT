@@ -1,79 +1,76 @@
 'use client'
 
 import Link from "next/link";
-import Image from "next/image";
 import { memo } from "react";
-import { motion } from "framer-motion";
+
 
 const Footer = memo(() => {
+    const textGlow = "transition-all duration-300 hover:scale-105 hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] inline-block w-fit";
+
     return (
-        <footer className="fixed bottom-0 left-0 w-full min-h-[500px] md:min-h-[500px] py-16 md:py-20 -z-10 bg-[#da2929] text-white flex flex-col items-center justify-center px-4 overflow-hidden">
-            {/* Background Decor Elements */}
-            <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-10">
-                <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-white rounded-full blur-[120px]" />
-                <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-black rounded-full blur-[120px]" />
-            </div>
-
-            <div className="max-w-7xl mx-auto w-full flex flex-col items-center relative z-10">
-                {/* Large Centered Logo */}
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    className="relative w-64 h-24 lg:w-80 lg:h-32 mb-4"
-                >
-                    <Image
-                        src="/image-removebg-preview(24).png"
-                        alt="Educareer Logo"
-                        fill
-                        className="object-contain brightness-0 invert"
-                    />
-                </motion.div>
-
-                {/* Newsletter Subscription */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.2 }}
-                    className="w-full max-w-md mb-12"
-                >
-                    <div className="flex flex-col items-center gap-4">
-                        <p className="text-white/80 text-[10px] font-black uppercase tracking-[0.3em]">Subscribe to our Newsletter</p>
-                        <form className="flex w-full gap-2 p-1.5 bg-white/10 backdrop-blur-md rounded-lg border border-white/20">
-                            <input
-                                type="email"
-                                placeholder="name@email.com"
-                                className="flex-grow bg-transparent px-4 py-2 text-sm text-white placeholder:text-white/40 border-none focus:ring-0 focus:outline-none"
-                            />
-                            <button className="bg-white text-[#da2929] px-6 py-2 rounded-md cursor-pointer text-xs font-black uppercase tracking-widest hover:bg-gray-100 transition-all duration-300">
-                                Send
-                            </button>
-                        </form>
+        <footer className="fixed bottom-0 left-0 w-full min-h-[500px] md:min-h-[500px] py-16 md:py-20 -z-10 bg-[#da2929] text-white flex flex-col items-center justify-center px-8 overflow-hidden">
+            <div className="max-w-7xl mx-auto w-full flex flex-col relative z-10">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 mb-16 w-full">
+                    {/* Brand Section */}
+                    <div className="flex flex-col gap-6">
+                        <div className="flex flex-col gap-2">
+                            <div className={`text-3xl font-bold text-white flex items-center ${textGlow}`}>
+                                BASIQ<span className="text-white mx-1 text-4xl">/</span>360&deg;
+                            </div>
+                            <p className={`text-sm text-white ${textGlow}`}>Digitize. Automate. Grow.</p>
+                        </div>
+                        <div className="flex items-start gap-3 text-sm text-white">
+                            <svg className={`w-5 h-5 mt-0.5 shrink-0 ${textGlow}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                            <p className={`leading-relaxed ${textGlow}`}>
+                                G01 - G03, SSR Corporate Park,<br />
+                                13/6, NH-19, Ekta Nagar,<br />
+                                Faridabad, Haryana 121003
+                            </p>
+                        </div>
                     </div>
-                </motion.div>
 
-                {/* Minimal Links */}
-                <div className="flex flex-wrap items-center justify-center gap-6 lg:gap-12 mb-12">
-                    {['Home', 'Platforms', 'Our Work', "Rewards' Corner", 'Rewards Program', 'Lets Talk'].map((item) => (
-                        <Link
-                            key={item}
-                            href="/"
-                            className="text-white/80 hover:text-white font-bold tracking-widest uppercase text-xs transition-all duration-300"
-                        >
-                            {item}
-                        </Link>
-                    ))}
+                    {/* About Section */}
+                    <div className="flex flex-col gap-6">
+                        <h3 className={`text-lg font-semibold text-white ${textGlow}`}>About</h3>
+                        <div className="flex flex-col gap-4 text-sm text-white items-start">
+                            <Link href="/" className={textGlow}>Home</Link>
+                            <Link href="/about" className={textGlow}>About us</Link>
+                            <Link href="/contact" className={textGlow}>Contact</Link>
+                        </div>
+                    </div>
+
+                    {/* Products Section */}
+                    <div className="flex flex-col gap-6">
+                        <h3 className={`text-lg font-semibold text-white ${textGlow}`}>Products</h3>
+                        <div className="flex flex-col gap-4 text-sm text-white items-start">
+                            <Link href="#" className={textGlow}>Loyalty Management</Link>
+                            <Link href="#" className={textGlow}>Sales Force Automation</Link>
+                            <Link href="#" className={textGlow}>Dealer/Distributor Management System</Link>
+                            <Link href="#" className={textGlow}>Dispatch Management</Link>
+                            <Link href="#" className={textGlow}>Warranty Management</Link>
+                            <Link href="#" className={textGlow}>Product Authentication</Link>
+                        </div>
+                    </div>
+
+                    {/* Social Section */}
+                    <div className="flex flex-col gap-6">
+                        <h3 className={`text-lg font-semibold text-white ${textGlow}`}>Social</h3>
+                        <div className="flex flex-col gap-4 text-sm text-white items-start">
+                            <Link href="#" className={textGlow}>Facebook</Link>
+                            <Link href="#" className={textGlow}>Instagram</Link>
+                            <Link href="#" className={textGlow}>Twitter</Link>
+                            <Link href="#" className={textGlow}>Linkedin</Link>
+                            <Link href="#" className={textGlow}>YouTube</Link>
+                        </div>
+                    </div>
                 </div>
 
-                {/* Copyright */}
-                <div className="pt-8 border-t border-white/10 w-full flex flex-col items-center gap-4 text-center">
-                    <p className="text-white/40 text-[10px] tracking-[0.3em] font-black uppercase">
-                        &copy; {new Date().getFullYear()} ROC. ALL RIGHTS RESERVED.
-                    </p>
-                    <div className="flex space-x-8">
-                        <Link href="/privacy" className="text-white/30 hover:text-white text-[9px] tracking-widest uppercase transition-colors">Privacy Policy</Link>
-                        <Link href="/terms" className="text-white/30 hover:text-white text-[9px] tracking-widest uppercase transition-colors">Terms of Service</Link>
+                {/* Copyright Section */}
+                <div className="pt-8 border-t border-white/20 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white w-full">
+                    <p className={textGlow}>Copyright @Basiq360. All Rights Reserved</p>
+                    <div className="flex items-center gap-8">
+                        <Link href="/terms" className={textGlow}>Terms & conditions</Link>
+                        <Link href="/privacy" className={textGlow}>Privacy Policy</Link>
                     </div>
                 </div>
             </div>

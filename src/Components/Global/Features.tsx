@@ -182,15 +182,13 @@ const ServiceCard = memo(({ service, index }: { service: ServiceItem; index: num
                 </AnimatePresence>
                 {/* Subtle overlay gradient */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-                
                 {/* Progress Indicators */}
                 <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 z-20">
                     {service.contents.map((_, i) => (
-                        <div 
-                            key={i} 
-                            className={`h-1.5 rounded-full transition-all duration-500 ${
-                                i === currentIndex ? "w-4 bg-white" : "w-1.5 bg-white/50"
-                            }`} 
+                        <div
+                            key={i}
+                            className={`h-1.5 rounded-full transition-all duration-500 ${i === currentIndex ? "w-4 bg-white" : "w-1.5 bg-white/50"
+                                }`}
                         />
                     ))}
                 </div>
