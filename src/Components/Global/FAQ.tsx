@@ -6,21 +6,25 @@ import Image from "next/image";
 
 const faqs = [
     {
-        question: "What makes your counseling methodology unique?",
-        answer: "We blend data-driven insights with human empathy. Our methodology doesn't just look at market trends; it focuses on long-term career fulfillment. We provide a roadmap that includes skill development, networking strategies, and placement support."
+        question: "What is RewardsOnClick?",
+        answer: "RewardsOnClick is a premium B2B corporate rewards and incentive platform, built by the team behind GiftsOnClick — 15+ years of corporate gifting experience. We help businesses run sales incentive programs and dealer/channel loyalty programs through a single branded portal."
     },
     {
-        question: "Do you provide support for international career transitions?",
-        answer: "Yes, we have specialized modules for candidates looking to move across borders. This includes visa guidance, cultural orientation, and connecting you with recruiters in your target country."
+        question: "Who is this platform for?",
+        answer: "Any organization that needs to reward or motivate a distributed group — sales teams, dealer and channel networks, distributors, or field partners. We currently work across industries including technology, healthcare, pharmaceuticals, telecom, BFSI, manufacturing, and government institutions."
     },
     {
-        question: "How long does the mentorship program typically last?",
-        answer: "Most of our comprehensive programs range from 3 to 6 months. However, we also offer 'Sprint' sessions for immediate needs like interview preparation or resume overhauls if you're in a time-sensitive transition."
+        question: "What kind of programs do you run?",
+        answer: "Two core program types: Sales Incentive Programs, built around transparent reward structures and milestone-based payouts, and Dealer & Channel Incentives, designed to strengthen distributor relationships through instant gift cards and electronics rewards."
     },
     {
-        question: "Are the sessions available in person or online?",
-        answer: "Both. While we have physical centers in major cities, our robust digital platform allows students from all over the world to access the same quality of mentorship through interactive virtual environments."
-    }
+        question: "Is RewardsOnClick GeM-registered?",
+        answer: "Yes. We're fully GeM-registered and direct-purchase ready, so government and public-sector organizations can procure through us without compliance friction."
+    },
+    {
+        question: "⁠How large is your rewards catalog?",
+        answer: "Over 1,000 vetted national brands, available as both instant digital e-vouchers and physical gifts, delivered across all Indian pin codes."
+    },
 ];
 
 const FAQ = memo(() => {
