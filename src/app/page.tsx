@@ -2,9 +2,11 @@ import Hero from "@/Components/Global/Hero";
 import Features from "@/Components/Global/Features";
 import CounsellingImpact from "@/Components/Global/CounsellingImpact";
 import Partners from "@/Components/Global/Partners";
+import Brand from "@/Components/Global/Brand";
 import Testimonials from "@/Components/Global/Testimonials";
 import FAQ from "@/Components/Global/FAQ";
 import CTA from "@/Components/Global/CTA";
+import Blog from "@/Components/Global/Blog";
 
 export default function Home() {
   return (
@@ -13,10 +15,10 @@ export default function Home() {
       <div id="features">
         <Features />
       </div>
-        <div id="partners">
+      <div id="partners">
         <Partners />
       </div>
-      
+
       {/* Section Divider */}
       <div className="relative py-8 bg-gray-50 overflow-hidden">
         <div className="max-w-[1450px] mx-auto px-4 lg:px-8">
@@ -33,10 +35,36 @@ export default function Home() {
         </div>
       </div>
 
-     <CounsellingImpact />
+      <CounsellingImpact />
+
+      <div id="brand">
+        <Brand />
+      </div>
+
+      <div className="relative py-8 bg-gray-50 overflow-hidden">
+        <div className="max-w-[1450px] mx-auto px-4 lg:px-8">
+          <div className="relative flex items-center justify-center">
+            <div className="absolute inset-0 flex items-center" aria-hidden="true">
+              <div className="w-full border-t border-gray-200"></div>
+            </div>
+            <div className="relative flex justify-center">
+              <span className="bg-gray-50 px-6">
+                <div className="w-2.5 h-2.5 rounded-full bg-[#da2929] opacity-20 animate-pulse"></div>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div id="testimonials">
         <Testimonials />
       </div>
+
+      <div id="blog">
+        <Blog />
+      </div>
+
+
       <div id="faq">
         <FAQ />
       </div>

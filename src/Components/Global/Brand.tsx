@@ -4,37 +4,35 @@
 import { memo } from "react";
 import { motion } from "framer-motion";
 
-const partners = [
-    { name: "Amazon", logo: "https://placehold.co/100x100?text=AMZN" },
-    { name: "Bajaj", logo: "https://placehold.co/100x100?text=Bajaj" },
-    { name: "BoAt", logo: "https://placehold.co/100x100?text=BoAt" },
-    { name: "Cello", logo: "https://placehold.co/100x100?text=Cello" },
-    { name: "Cross", logo: "https://placehold.co/100x100?text=Cross" },
-    { name: "Faber", logo: "https://placehold.co/100x100?text=Faber" },
-    { name: "Havells", logo: "https://placehold.co/100x100?text=HVL" },
-    { name: "Jack & Jones", logo: "https://placehold.co/100x100?text=J%26J" },
-    { name: "JBL", logo: "https://placehold.co/100x100?text=JBL" },
-    { name: "LG", logo: "https://placehold.co/100x100?text=LG" },
-    { name: "Luxor", logo: "https://placehold.co/100x100?text=Luxor" },
-    { name: "Nasher Miles", logo: "https://placehold.co/100x100?text=NM" },
-    { name: "Pepe Jeans", logo: "https://placehold.co/100x100?text=Pepe" },
-    { name: "Portronics", logo: "https://placehold.co/100x100?text=Port" },
-    { name: "Safari", logo: "https://placehold.co/100x100?text=Safari" },
-    { name: "Samsung", logo: "https://placehold.co/100x100?text=SMG" },
-    { name: "Titan", logo: "https://placehold.co/100x100?text=Titan" },
-    { name: "Timex", logo: "https://placehold.co/100x100?text=Timex" },
-    { name: "Toreto", logo: "https://placehold.co/100x100?text=Toreto" },
-    { name: "Welspun", logo: "https://placehold.co/100x100?text=WLS" },
-    { name: "Whirlpool", logo: "https://placehold.co/100x100?text=WHL" },
-    { name: "Wildcraft", logo: "https://placehold.co/100x100?text=Wild" }
+const brands = [
+    { name: "Apple", logo: "https://placehold.co/100x100?text=Apple" },
+    { name: "Google", logo: "https://placehold.co/100x100?text=Google" },
+    { name: "Microsoft", logo: "https://placehold.co/100x100?text=MSFT" },
+    { name: "Netflix", logo: "https://placehold.co/100x100?text=NFLX" },
+    { name: "Meta", logo: "https://placehold.co/100x100?text=Meta" },
+    { name: "Tesla", logo: "https://placehold.co/100x100?text=Tesla" },
+    { name: "SpaceX", logo: "https://placehold.co/100x100?text=SPCX" },
+    { name: "Airbnb", logo: "https://placehold.co/100x100?text=ABNB" },
+    { name: "Uber", logo: "https://placehold.co/100x100?text=Uber" },
+    { name: "Lyft", logo: "https://placehold.co/100x100?text=Lyft" },
+    { name: "Stripe", logo: "https://placehold.co/100x100?text=Stripe" },
+    { name: "Spotify", logo: "https://placehold.co/100x100?text=SPOT" },
+    { name: "Sony", logo: "https://placehold.co/100x100?text=Sony" },
+    { name: "Nvidia", logo: "https://placehold.co/100x100?text=NVDA" },
+    { name: "Intel", logo: "https://placehold.co/100x100?text=Intel" },
+    { name: "AMD", logo: "https://placehold.co/100x100?text=AMD" },
+    { name: "Dell", logo: "https://placehold.co/100x100?text=Dell" },
+    { name: "HP", logo: "https://placehold.co/100x100?text=HP" },
+    { name: "Lenovo", logo: "https://placehold.co/100x100?text=Lenovo" },
+    { name: "Asus", logo: "https://placehold.co/100x100?text=Asus" }
 ];
 
-const Partners = memo(() => {
-    // Duplicate the partners array to create a seamless loop
-    const doubledPartners = [...partners, ...partners];
+const Brand = memo(() => {
+    // Duplicate the brands array to create a seamless loop
+    const doubledBrands = [...brands, ...brands];
 
     return (
-        <section className="py-20 bg-gray-50 border-y border-gray-100 overflow-hidden">
+        <section className="py-20 bg-white border-y border-gray-100 overflow-hidden">
             <div className="max-w-[1450px] mx-auto px-4 lg:px-8 mb-12 text-center">
                 <motion.p
                     initial={{ opacity: 0, y: 10 }}
@@ -42,7 +40,7 @@ const Partners = memo(() => {
                     viewport={{ once: true }}
                     className="text-[#da2929] font-black uppercase tracking-[0.3em] text-[10px] mb-4"
                 >
-                    Our Partners
+                    Our Brands
                 </motion.p>
                 <motion.h2
                     initial={{ opacity: 0, y: 10 }}
@@ -51,14 +49,14 @@ const Partners = memo(() => {
                     transition={{ delay: 0.1 }}
                     className="text-2xl lg:text-3xl font-bold text-gray-900 tracking-tight"
                 >
-                    Trusted by <span className="text-[#da2929]">Leading</span>  Brands and Partners
+                    Trusted by <span className="text-[#da2929]">Leading</span>  Brands
                 </motion.h2>
             </div>
 
             <div className="relative flex items-center group">
                 {/* Horizontal Marquee */}
                 <motion.div
-                    animate={{ x: ["0%", "-50%"] }}
+                    animate={{ x: ["-50%", "0%"] }}
                     transition={{
                         duration: 30,
                         repeat: Infinity,
@@ -66,16 +64,16 @@ const Partners = memo(() => {
                     }}
                     className="flex items-center gap-12 lg:gap-24 whitespace-nowrap min-w-max px-12"
                 >
-                    {doubledPartners.map((partner, index) => (
+                    {doubledBrands.map((brand, index) => (
                         <div
                             key={index}
                             className="flex items-center gap-4 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-default"
                         >
-                            {/* Partner Logo */}
+                            {/* Brand Logo */}
                             <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-xl bg-gray-200 flex items-center justify-center overflow-hidden border border-gray-300 shadow-sm relative">
                                 <img
-                                    src={partner.logo}
-                                    alt={partner.name}
+                                    src={brand.logo}
+                                    alt={brand.name}
                                     className="w-full h-full object-contain p-2"
                                     onError={(e) => {
                                         // Fallback to initials if image fails to load
@@ -86,24 +84,24 @@ const Partners = memo(() => {
                                     }}
                                 />
                                 <div className="absolute inset-0 hidden items-center justify-center font-black text-xs text-gray-600 bg-gray-200">
-                                    {partner.name.split(' ').map(word => word[0]).join('').slice(0, 2)}
+                                    {brand.name.split(' ').map(word => word[0]).join('').slice(0, 2)}
                                 </div>
                             </div>
                             <span className="text-xl lg:text-2xl font-black text-gray-800 tracking-tighter">
-                                {partner.name}
+                                {brand.name}
                             </span>
                         </div>
                     ))}
                 </motion.div>
 
                 {/* Gradient Fades for depth */}
-                <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-gray-50 to-transparent z-10 pointer-events-none" />
-                <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-gray-50 to-transparent z-10 pointer-events-none" />
+                <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+                <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
             </div>
         </section>
     );
 });
 
-Partners.displayName = "Partners";
+Brand.displayName = "Brand";
 
-export default Partners;
+export default Brand;

@@ -53,6 +53,7 @@ const services: ServiceItem[] = [
                 description: "Encouraging creativity, entrepreneurship, and modern business strategies to shape successful careers.",
                 image: "https://images.unsplash.com/photo-1758876203468-39e5493bfe76?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             }
+
         ]
     },
     {
@@ -131,16 +132,15 @@ const ServiceCard = memo(({ service, index }: { service: ServiceItem; index: num
 
     useEffect(() => {
         if (!isInView) return;
-        
+
         // Different rotation speed/delay per card so they aren't synced
         const intervalTime = 4000 + (index * 800); // Cards switch at different intervals
         const delayTime = index * 600; // Cards start switching at different times
-        
+
         const timeout = setTimeout(() => {
             const interval = setInterval(() => {
                 setCurrentIndex((prev) => (prev + 1) % service.contents.length);
             }, intervalTime);
-            
             return () => clearInterval(interval);
         }, delayTime);
 
