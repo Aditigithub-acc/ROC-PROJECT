@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-
+import { useRouter } from "next/navigation";
 const jobs = [
     {
         id: 1,
@@ -38,13 +38,14 @@ const jobs = [
 ];
 
 export default function Careers() {
+    const router = useRouter();
     return (
         <section className="py-24 bg-gray-50 min-h-screen">
             <div className="max-w-[1200px] mx-auto px-4 lg:px-8">
-                
+
                 {/* Header Section */}
                 <div className="text-center max-w-2xl mx-auto mb-16 relative">
-                    <motion.h1 
+                    <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -52,7 +53,7 @@ export default function Careers() {
                     >
                         Join Our Team
                     </motion.h1>
-                    
+
                     {/* Decorative Lines below heading */}
                     <div className="flex items-center justify-center gap-2 mb-8">
                         <div className="h-1 w-12 bg-gray-300 rounded-full"></div>
@@ -60,14 +61,14 @@ export default function Careers() {
                         <div className="h-1 w-12 bg-gray-300 rounded-full"></div>
                     </div>
 
-                    <motion.p 
+                    <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
                         className="text-lg text-gray-600 leading-relaxed"
                     >
-                        We&apos;re on a mission to transform educational counseling. Come build the future with us. 
+                        We&apos;re on a mission to transform educational counseling. Come build the future with us.
                         Explore our open roles below.
                     </motion.p>
                 </div>
@@ -107,7 +108,10 @@ export default function Careers() {
                                 </p>
                             </div>
                             <div className="mt-8 pt-6 border-t border-gray-100">
-                                <button className="w-full py-3 px-6 bg-gray-900 text-white rounded-xl font-bold hover:bg-[#da2929] transition-colors duration-300 shadow-md">
+                                <button
+                                    onClick={() => router.push("/contact")}
+                                    className="w-full py-3 px-6 bg-gray-900 text-white rounded-xl font-bold hover:bg-[#da2929] transition-colors duration-300 shadow-md"
+                                >
                                     Apply Now
                                 </button>
                             </div>
