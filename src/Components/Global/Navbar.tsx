@@ -45,7 +45,7 @@ const Navbar = memo(() => {
             ]
         },
         { name: 'Our Work', href: '/gallery' },
-        { name: 'Rewards', href: '/' },
+        { name: 'Rewards', href: '/rewards' },
         { name: "Blog", href: '/blog' },
         { name: "Lets's Talk", href: '/contact' },
     ];

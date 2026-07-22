@@ -1,5 +1,8 @@
 import LoyaltyManagementHero from "@/Components/LoyaltyManagement/LoyaltyManagementHero";
-import LoyaltyManagementBlog from "@/Components/LoyaltyManagement/LoyaltyManagementBlog";
+import LoyaltyManagementcontent from "@/Components/LoyaltyManagement/LoyaltyManagementcontent";
+import LoyaltyManagementQR from "@/Components/LoyaltyManagement/LoyaltyManagementQR";
+import LoyaltyManagementTransfers from "@/Components/LoyaltyManagement/LoyaltyManagementTransfers";
+import LoyaltyManagementVideo from "@/Components/LoyaltyManagement/LoyaltyManagementVideo";
 import CTA from "@/Components/Global/CTA";
 import Testimonials from "@/Components/Global/Testimonials";
 import Navbar from "@/Components/Global/Navbar";
@@ -11,8 +14,15 @@ export default function LoyaltyManagement() {
         <main className="min-h-screen bg-white">
             <ScrollProgress />
             <Navbar />
+
             <LoyaltyManagementHero />
-            <LoyaltyManagementBlog />
+            <LoyaltyManagementVideo />
+            <LoyaltyManagementcontent />
+
+
+            <LoyaltyManagementQR />
+            <LoyaltyManagementTransfers />
+
             <Testimonials />
             <CTA />
         </main>

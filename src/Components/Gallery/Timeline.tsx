@@ -21,7 +21,7 @@ const timelineEvents: TimelineEvent[] = [
             "We developed a digital loyalty platform that enabled customers to earn and redeem reward points, access exclusive offers, and receive personalised promotions. The solution created a seamless shopping experience across multiple channels while increasing repeat purchases and long-term customer engagement.",
     },
     {
-        year: "Manufacturing",
+        year: "Manuf",
         date: "Channel Partner Rewards",
         title: "Dealer Performance Incentive Portal",
         description:
