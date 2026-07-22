@@ -21,10 +21,10 @@ const brands = [
     { name: "Rallis India Limited", logo: "/Logo/rallis-india-limited.png" },
     { name: "SBI", logo: "/Logo/sbi.jpeg" },
     { name: "SML", logo: "/Logo/sml_ISUZU.jpeg" },
-    { name: "ISUZU", logo: "/Logo/" },
+    { name: "ISUZU", logo: "https://placehold.co/200x100?text=ISUZU" },
     { name: "Syngenta India Limited", logo: "/Logo/syngenta.jpeg" },
     { name: "Venus", logo: "/Logo/venus.png" },
-    { name: "Remedies", logo: "/Logo/" }
+    { name: "Remedies", logo: "https://placehold.co/200x100?text=Remedies" }
 ];
 
 const Brand = memo(() => {
