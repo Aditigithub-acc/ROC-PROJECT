@@ -40,9 +40,8 @@ const Navbar = memo(() => {
             name: 'Platforms',
             href: '#',
             subItems: [
-                { name: 'Dealer Distribution', href: '/about' },
-                { name: 'Loyalty Management', href: '/about' },
-                { name: 'Rewards', href: '/contact' },
+                { name: 'Dealer Distribution', href: '/dealerDistribution' },
+                { name: 'Loyalty Management', href: '/loyaltyManagement' },
             ]
         },
         { name: 'Our Work', href: '/gallery' },
