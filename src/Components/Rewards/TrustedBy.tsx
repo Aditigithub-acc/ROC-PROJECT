@@ -41,26 +41,57 @@ export default function TrustedBy() {
                     </motion.h2>
                 </div>
 
-                {/* Brands Grid (framed and styled) */}
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-4 lg:gap-6 mb-16">
-                    {brands.map((brand, i) => (
-                        <motion.div
-                            key={i}
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: (i % 6) * 0.05 }}
-                            whileHover={{ y: -5, scale: 1.02 }}
-                            className="group bg-white h-24 rounded-2xl flex items-center justify-center border border-gray-100 shadow-sm hover:shadow-xl hover:border-[#da2929]/30 transition-all duration-300 relative overflow-hidden"
-                        >
-                            {/* Hover accent */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-[#da2929]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                {/* Moving Brands Rows */}
+                <div className="flex flex-col gap-6 mb-16 relative overflow-hidden">
+                    {/* Fading edges for the marquee effect */}
+                    <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-gray-50 to-transparent z-10 pointer-events-none"></div>
+                    <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-gray-50 to-transparent z-10 pointer-events-none"></div>
 
-                            <span className="text-center px-4 text-gray-500 font-bold text-[11px] uppercase tracking-wider group-hover:text-[#da2929] transition-colors duration-300 z-10">
-                                {brand}
-                            </span>
-                        </motion.div>
-                    ))}
+                    {/* Line 1: Right to Left */}
+                    <motion.div
+                        className="flex gap-4 lg:gap-6 w-max"
+                        animate={{ x: ["0%", "-50%"] }}
+                        transition={{
+                            duration: 30,
+                            repeat: Infinity,
+                            ease: "linear"
+                        }}
+                    >
+                        {[...brands, ...brands].map((brand, i) => (
+                            <div
+                                key={i}
+                                className="group bg-white h-24 w-48 sm:w-56 rounded-2xl flex-shrink-0 flex items-center justify-center border border-gray-100 shadow-sm hover:shadow-xl hover:border-[#da2929]/30 transition-all duration-300 relative overflow-hidden"
+                            >
+                                <div className="absolute inset-0 bg-gradient-to-br from-[#da2929]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                <span className="text-center px-4 text-gray-500 font-bold text-[11px] uppercase tracking-wider group-hover:text-[#da2929] transition-colors duration-300 z-10">
+                                    {brand}
+                                </span>
+                            </div>
+                        ))}
+                    </motion.div>
+
+                    {/* Line 2: Left to Right */}
+                    <motion.div
+                        className="flex gap-4 lg:gap-6 w-max"
+                        animate={{ x: ["-50%", "0%"] }}
+                        transition={{
+                            duration: 30,
+                            repeat: Infinity,
+                            ease: "linear"
+                        }}
+                    >
+                        {[...[...brands].reverse(), ...[...brands].reverse()].map((brand, i) => (
+                            <div
+                                key={`rev-${i}`}
+                                className="group bg-white h-24 w-48 sm:w-56 rounded-2xl flex-shrink-0 flex items-center justify-center border border-gray-100 shadow-sm hover:shadow-xl hover:border-[#da2929]/30 transition-all duration-300 relative overflow-hidden"
+                            >
+                                <div className="absolute inset-0 bg-gradient-to-br from-[#da2929]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                <span className="text-center px-4 text-gray-500 font-bold text-[11px] uppercase tracking-wider group-hover:text-[#da2929] transition-colors duration-300 z-10">
+                                    {brand}
+                                </span>
+                            </div>
+                        ))}
+                    </motion.div>
                 </div>
 
                 {/* Bottom CTA */}

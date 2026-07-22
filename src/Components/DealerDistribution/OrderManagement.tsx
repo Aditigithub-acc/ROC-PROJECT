@@ -4,51 +4,55 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const CheckIcon = () => (
-    <svg 
-        className="w-5 h-5 text-[#da2929] mt-1 flex-shrink-0" 
-        fill="none" 
-        viewBox="0 0 24 24" 
+    <svg
+        className="w-5 h-5 text-[#da2929] mt-1 flex-shrink-0"
+        fill="none"
+        viewBox="0 0 24 24"
         stroke="currentColor"
     >
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
     </svg>
 );
 
-export default function LoyaltyManagementQR() {
+export default function OrderManagement() {
     return (
-        <section className="py-24 bg-white overflow-hidden">
+        <section className="py-24 bg-gray-50 overflow-hidden">
             <div className="max-w-[1450px] mx-auto px-4 lg:px-8">
-                <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+                <div className="flex flex-col lg:flex-row-reverse items-center gap-16 lg:gap-24">
                     
                     {/* Text Content */}
                     <motion.div 
-                        initial={{ opacity: 0, x: -30 }}
+                        initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
                         className="w-full lg:w-1/2"
                     >
                         <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
-                            QR-Based Points
+                            Order Management
                         </h2>
                         
                         <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                            Basiq360&apos;s Loyalty & Rewards Management system revolutionizes how you manage your rewards programs with the QR-based points system. This system offers:
+                            Order management is critical in today&apos;s fast-paced sales environment. Basiq360&apos;s DMS caters to this by offering:
                         </p>
 
                         <div className="space-y-6 mb-10">
                             {[
                                 {
-                                    title: "Quick and Effortless Setup",
-                                    desc: "The system is designed to minimize operational difficulties, ensuring the setup process is quick and effortless. This smooth implementation lets you concentrate on what truly matters - boosting your sales."
+                                    title: "Comprehensive Order Management",
+                                    desc: "The DMS handles primary orders (executed by the company) and secondary orders (approved and implemented by distributors). This dual-level management ensures that all orders are accurately tracked and completed on time."
                                 },
                                 {
-                                    title: "Flexible Bonus Schemes",
-                                    desc: "The system&apos;s flexibility stands out, allowing you to tailor your rewards strategy to align with your business objectives. You can set up time-based, product-based, or area-wise bonus schemes."
+                                    title: "Integration With Messaging Platforms",
+                                    desc: "The system integrates with popular messaging platforms like WhatsApp, providing a convenient interface for your distributors. This familiar platform facilitates quick and efficient communication."
                                 },
                                 {
-                                    title: "Diverse Incentives",
-                                    desc: "The QR-based points system also extends to the incentives you can offer. Whether it&apos;s one-time referral or transaction-based incentives, you can choose what best suits your business model."
+                                    title: "Financial Management Tools",
+                                    desc: "The DMS provides tools for invoicing, payments/receipts, credit notes, ledgers, and outstanding or overdue accounts. By centralizing these processes, the system enhances financial control and transparency."
+                                },
+                                {
+                                    title: "Integration With Accounting Software",
+                                    desc: "The DMS integrates with accounting software like Tally, Busy, SAP, and other ERPs via APIs. This feature ensures your financial records are always accurate and up-to-date, reducing the risk of errors and improving financial management efficiency."
                                 }
                             ].map((item, idx) => (
                                 <motion.div 
@@ -77,7 +81,7 @@ export default function LoyaltyManagementQR() {
                         <motion.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="px-8 py-3 rounded-lg border-2 border-gray-200 text-gray-900 font-semibold hover:border-[#da2929] hover:text-[#da2929] transition-all duration-300 shadow-sm hover:shadow-md"
+                            className="px-8 py-3 rounded-lg border-2 border-gray-200 text-gray-900 font-semibold hover:border-[#da2929] hover:text-[#da2929] transition-all duration-300 shadow-sm hover:shadow-md bg-white"
                         >
                             Start for free
                         </motion.button>
@@ -85,7 +89,7 @@ export default function LoyaltyManagementQR() {
 
                     {/* Image/Visual Content */}
                     <motion.div 
-                        initial={{ opacity: 0, x: 30 }}
+                        initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
@@ -98,8 +102,8 @@ export default function LoyaltyManagementQR() {
                             <motion.img 
                                 whileHover={{ scale: 1.05 }}
                                 transition={{ duration: 0.7 }}
-                                src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=1000&q=80" 
-                                alt="QR Code Scanning" 
+                                src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=1000&q=80" 
+                                alt="Order Management" 
                                 className="w-full h-auto object-cover rounded-3xl"
                             />
                             
@@ -107,12 +111,12 @@ export default function LoyaltyManagementQR() {
                             <motion.div 
                                 animate={{ y: [0, -15, 0] }}
                                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                                className="absolute -top-6 -right-6 w-24 h-24 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70"
+                                className="absolute -top-6 -left-6 w-24 h-24 bg-red-100 rounded-full mix-blend-multiply filter blur-xl opacity-70"
                             />
                             <motion.div 
                                 animate={{ y: [0, 15, 0] }}
                                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                                className="absolute -bottom-8 -left-8 w-32 h-32 bg-red-100 rounded-full mix-blend-multiply filter blur-xl opacity-70"
+                                className="absolute -bottom-8 -right-8 w-32 h-32 bg-orange-100 rounded-full mix-blend-multiply filter blur-xl opacity-70"
                             />
                         </div>
                     </motion.div>

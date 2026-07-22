@@ -3,6 +3,7 @@ import LoyaltyManagementcontent from "@/Components/LoyaltyManagement/LoyaltyMana
 import LoyaltyManagementQR from "@/Components/LoyaltyManagement/LoyaltyManagementQR";
 import LoyaltyManagementTransfers from "@/Components/LoyaltyManagement/LoyaltyManagementTransfers";
 import LoyaltyManagementVideo from "@/Components/LoyaltyManagement/LoyaltyManagementVideo";
+import LoyaltyManagementPointsRedemption from "@/Components/LoyaltyManagement/LoyaltyManagementPointsRedemption";
 import CTA from "@/Components/Global/CTA";
 import Testimonials from "@/Components/Global/Testimonials";
 import Navbar from "@/Components/Global/Navbar";
@@ -20,6 +21,7 @@ export default function LoyaltyManagement() {
             <LoyaltyManagementcontent />
             <LoyaltyManagementQR />
             <LoyaltyManagementTransfers />
+            <LoyaltyManagementPointsRedemption />
             <Testimonials />
             <CTA />
         </main>

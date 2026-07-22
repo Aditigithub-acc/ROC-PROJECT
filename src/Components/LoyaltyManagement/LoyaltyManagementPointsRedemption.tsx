@@ -4,24 +4,24 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const CheckIcon = () => (
-    <svg 
-        className="w-5 h-5 text-[#da2929] mt-1 flex-shrink-0" 
-        fill="none" 
-        viewBox="0 0 24 24" 
+    <svg
+        className="w-5 h-5 text-[#da2929] mt-1 flex-shrink-0"
+        fill="none"
+        viewBox="0 0 24 24"
         stroke="currentColor"
     >
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
     </svg>
 );
 
-export default function LoyaltyManagementQR() {
+export default function LoyaltyManagementPointsRedemption() {
     return (
         <section className="py-24 bg-white overflow-hidden">
             <div className="max-w-[1450px] mx-auto px-4 lg:px-8">
                 <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
-                    
+
                     {/* Text Content */}
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
@@ -29,29 +29,29 @@ export default function LoyaltyManagementQR() {
                         className="w-full lg:w-1/2"
                     >
                         <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
-                            QR-Based Points
+                            Points Redemption
                         </h2>
-                        
+
                         <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                            Basiq360&apos;s Loyalty & Rewards Management system revolutionizes how you manage your rewards programs with the QR-based points system. This system offers:
+                            The Loyalty & Rewards Management system also optimizes how points are earned and redeemed. This feature encompasses:
                         </p>
 
                         <div className="space-y-6 mb-10">
                             {[
                                 {
-                                    title: "Quick and Effortless Setup",
-                                    desc: "The system is designed to minimize operational difficulties, ensuring the setup process is quick and effortless. This smooth implementation lets you concentrate on what truly matters - boosting your sales."
+                                    title: "Scan and Transfer-Based Earnings",
+                                    desc: "Points can be earned through scan-based and transfer-based methods, even in the case of non-QR-coded inventory. This versatility enhances the user experience for your channel partners."
                                 },
                                 {
-                                    title: "Flexible Bonus Schemes",
-                                    desc: "The system&apos;s flexibility stands out, allowing you to tailor your rewards strategy to align with your business objectives. You can set up time-based, product-based, or area-wise bonus schemes."
+                                    title: "Invoicing-Based Transfers",
+                                    desc: "The system allows invoicing-based transfers to distributors and retailers, streamlining the redemption process."
                                 },
                                 {
-                                    title: "Diverse Incentives",
-                                    desc: "The QR-based points system also extends to the incentives you can offer. Whether it&apos;s one-time referral or transaction-based incentives, you can choose what best suits your business model."
+                                    title: "Real-Time Tracking",
+                                    desc: "Monitor and track your loyalty program's performance in real time. That allows you to respond to channel partner claims faster, improving your relationship with them and ensuring the smooth operation of your loyalty program."
                                 }
                             ].map((item, idx) => (
-                                <motion.div 
+                                <motion.div
                                     key={idx}
                                     initial={{ opacity: 0, y: 15 }}
                                     whileInView={{ opacity: 1, y: 0 }}
@@ -77,14 +77,14 @@ export default function LoyaltyManagementQR() {
                         <motion.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="px-8 py-3 rounded-lg border-2 border-gray-200 text-gray-900 font-semibold hover:border-[#da2929] hover:text-[#da2929] transition-all duration-300 shadow-sm hover:shadow-md"
+                            className="px-8 py-3 rounded-lg border-2 border-gray-200 text-gray-900 font-semibold hover:border-[#da2929] hover:text-[#da2929] transition-all duration-300 shadow-sm hover:shadow-md bg-white"
                         >
                             Start for free
                         </motion.button>
                     </motion.div>
 
                     {/* Image/Visual Content */}
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
@@ -94,25 +94,25 @@ export default function LoyaltyManagementQR() {
                         <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
                             {/* Overlay for hover effect */}
                             <div className="absolute inset-0 bg-[#da2929]/0 group-hover:bg-[#da2929]/10 transition-colors duration-500 z-10" />
-                            
-                            <motion.img 
+
+                            <motion.img
                                 whileHover={{ scale: 1.05 }}
                                 transition={{ duration: 0.7 }}
-                                src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=1000&q=80" 
-                                alt="QR Code Scanning" 
+                                src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=1000&q=80"
+                                alt="Points Redemption and Scanning"
                                 className="w-full h-auto object-cover rounded-3xl"
                             />
-                            
+
                             {/* Decorative floating elements */}
-                            <motion.div 
+                            <motion.div
                                 animate={{ y: [0, -15, 0] }}
                                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                                className="absolute -top-6 -right-6 w-24 h-24 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70"
+                                className="absolute -top-6 -right-6 w-24 h-24 bg-red-100 rounded-full mix-blend-multiply filter blur-xl opacity-70"
                             />
-                            <motion.div 
+                            <motion.div
                                 animate={{ y: [0, 15, 0] }}
                                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                                className="absolute -bottom-8 -left-8 w-32 h-32 bg-red-100 rounded-full mix-blend-multiply filter blur-xl opacity-70"
+                                className="absolute -bottom-8 -left-8 w-32 h-32 bg-yellow-100 rounded-full mix-blend-multiply filter blur-xl opacity-70"
                             />
                         </div>
                     </motion.div>

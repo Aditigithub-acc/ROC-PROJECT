@@ -70,7 +70,7 @@ const Brand = memo(() => {
                             className="flex items-center gap-4 cursor-default"
                         >
                             {/* Brand Logo */}
-                            <div className="h-20 lg:h-24 rounded-xl bg-white flex items-center justify-center overflow-hidden border border-gray-200 shadow-sm relative shrink-0">
+                            <div className="h-20 lg:h-24 w-32 lg:w-40 rounded-xl bg-white flex items-center justify-center overflow-hidden border border-gray-200 shadow-sm relative shrink-0">
                                 <img
                                     src={brand.logo}
                                     alt={brand.name}
