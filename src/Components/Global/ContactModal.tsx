@@ -35,19 +35,6 @@ const contactOptions = [
         lightColor: "bg-blue-50",
         textColor: "text-blue-600"
     },
-    {
-        name: "Appointment",
-        description: "Schedule a 1-on-1 session",
-        href: "#cta", // Link to CTA section or booking page
-        icon: (
-            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-            </svg>
-        ),
-        color: "bg-[#da2929]",
-        lightColor: "bg-red-50",
-        textColor: "text-[#da2929]"
-    }
 ];
 
 export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
@@ -77,7 +64,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                                     <h3 className="text-2xl font-black text-gray-900 tracking-tight">Contact Us</h3>
                                     <p className="text-gray-500 text-sm font-medium mt-1">Choose your preferred way to connect</p>
                                 </div>
-                                <button 
+                                <button
                                     onClick={onClose}
                                     className="p-2 hover:bg-gray-100 rounded-full transition-colors"
                                 >
@@ -95,7 +82,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                                         animate={{ opacity: 1, x: 0 }}
                                         transition={{ delay: index * 0.1 }}
                                     >
-                                        <Link 
+                                        <Link
                                             href={option.href}
                                             onClick={onClose}
                                             className="group flex items-center gap-4 p-4 rounded-2xl border border-gray-100 hover:border-transparent hover:bg-gray-50 transition-all duration-300"

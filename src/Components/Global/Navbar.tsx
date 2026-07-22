@@ -40,12 +40,13 @@ const Navbar = memo(() => {
             name: 'Platforms',
             href: '#',
             subItems: [
-                { name: 'Dealer Distribution', href: '/about' },
-                { name: 'Loyalty Management', href: '/about' }
+                { name: 'Dealer Distribution', href: '/dealerDistribution' },
+                { name: 'Loyalty Management', href: '/loyaltyManagement' },
             ]
         },
         { name: 'Our Work', href: '/gallery' },
         { name: 'Rewards', href: '/' },
+        { name: "Blog", href: '/blog' },
         { name: "Lets's Talk", href: '/contact' },
     ];
 
@@ -62,7 +63,7 @@ const Navbar = memo(() => {
                     <div className="flex items-center gap-2 relative group flex-shrink-0">
                         <div className={`relative overflow-hidden transition-all duration-500 ${scrolled ? 'w-40 h-12' : 'w-56 h-16 lg:w-64 lg:h-18'}`}>
                             <Image
-                                src="/image-removebg-preview(24).png"
+                                src="/_74E5DE6D-C488-4AA3-9488-4AD9629F9A79_-removebg-preview.png"
                                 alt="Logo"
                                 fill
                                 className="object-contain"
