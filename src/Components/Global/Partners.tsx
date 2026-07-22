@@ -23,7 +23,7 @@ const partners = [
     { name: "Samsung", logo: "/Logo/Samsung.avif" },
     { name: "Titan", logo: "/Logo/Titan.jpeg" },
     { name: "Timex", logo: "/Logo/Timex.png" },
-    { name: "Toreto", logo:"/Logo/Toreto.png" },
+    { name: "Toreto", logo: "/Logo/Toreto.png" },
     { name: "Welspun", logo: "/Logo/Welspun.jpeg" },
     { name: "Whirlpool", logo: "/Logo/Whirlpool.png" },
     { name: "Wildcraft", logo: "/Logo/the-wildcraft.png" }
@@ -72,11 +72,11 @@ const Partners = memo(() => {
                             className="flex items-center gap-4 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-default"
                         >
                             {/* Partner Logo */}
-                            <div className="h-14 lg:h-16 min-w-[3.5rem] lg:min-w-[4rem] rounded-xl bg-white flex items-center justify-center overflow-hidden border border-gray-200 shadow-sm relative shrink-0 px-2">
+                            <div className="h-20 lg:h-24 rounded-xl bg-white flex items-center justify-center overflow-hidden border border-gray-200 shadow-sm relative shrink-0">
                                 <img
                                     src={partner.logo}
                                     alt={partner.name}
-                                    className="max-h-full w-auto object-contain py-1.5 mix-blend-multiply"
+                                    className="h-full w-auto object-contain mix-blend-multiply"
                                     onError={(e) => {
                                         // Fallback to initials if image fails to load
                                         e.currentTarget.style.display = 'none';
@@ -89,9 +89,6 @@ const Partners = memo(() => {
                                     {partner.name.split(' ').map(word => word[0]).join('').slice(0, 2)}
                                 </div>
                             </div>
-                            <span className="text-xl lg:text-2xl font-black text-gray-800 tracking-tighter">
-                                {partner.name}
-                            </span>
                         </div>
                     ))}
                 </motion.div>
