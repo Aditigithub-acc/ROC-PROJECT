@@ -1,6 +1,7 @@
 'use client'
 
 import Link from "next/link";
+import Image from "next/image";
 import { memo } from "react";
 
 
@@ -14,10 +15,15 @@ const Footer = memo(() => {
                     {/* Brand Section */}
                     <div className="flex flex-col gap-6">
                         <div className="flex flex-col gap-2">
-                            <div className={`text-3xl font-bold text-white flex items-center ${textGlow}`}>
-                                BASIQ<span className="text-white mx-1 text-4xl">/</span>360&deg;
+                            <div className={`relative w-48 md:w-56 h-16 flex items-center ${textGlow}`}>
+                                <Image
+                                    src="/_74E5DE6D-C488-4AA3-9488-4AD9629F9A79_-removebg-preview.png"
+                                    alt="ROC Logo"
+                                    fill
+                                    className="object-contain object-left brightness-0 invert"
+                                />
                             </div>
-                            <p className={`text-sm text-white ${textGlow}`}>Digitize. Automate. Grow.</p>
+                            <p className={`text-sm text-white mt-1 ${textGlow}`}>Digitize. Automate. Grow.</p>
                         </div>
                         <div className="flex items-start gap-3 text-sm text-white">
                             <svg className={`w-5 h-5 mt-0.5 shrink-0 ${textGlow}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>

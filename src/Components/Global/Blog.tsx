@@ -11,6 +11,7 @@ const blogPosts = [
         excerpt: "Discover how AI and personalized data are transforming the way students choose their career paths and find the right universities. Explore the new era of education.",
         image: "https://placehold.co/600x400/da2929/ffffff?text=Education+Future",
         date: "July 12, 2026",
+        link: "/sales", // Updated to point to your new SalesBlog page
     },
     {
         id: 2,
@@ -18,6 +19,7 @@ const blogPosts = [
         excerpt: "Explore the most promising career fields for the next decade, from sustainable engineering to advanced artificial intelligence. Plan your studies around high-demand skills.",
         image: "https://placehold.co/600x400/2952da/ffffff?text=Career+Opportunities",
         date: "June 28, 2026",
+        link: "/blog/career-opportunities", // Placeholder distinct link
     },
     {
         id: 3,
@@ -25,6 +27,7 @@ const blogPosts = [
         excerpt: "Practical tips and strategies for high school students and parents to manage the anxiety of the university application process and stay focused on what truly matters.",
         image: "https://placehold.co/600x400/29da8f/ffffff?text=Stress+Management",
         date: "May 15, 2026",
+        link: "/blog/admissions-stress", // Placeholder distinct link
     }
 ];
 
@@ -86,7 +89,7 @@ export default function Blog() {
                                         {post.excerpt}
                                     </p>
                                     <button className="text-[#da2929] font-bold text-sm uppercase tracking-wider hover:text-red-700 transition-colors flex items-center gap-2 mt-4"
-                                        onClick={() => router.push("/sales")}>
+                                        onClick={() => router.push(post.link)}>
                                         Read More
                                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                                     </button>
