@@ -1,5 +1,5 @@
 import GalleryHero from "@/Components/Gallery/GalleryHero";
-import GalleryGrid from "@/Components/Gallery/GalleryGrid";
+import Timeline from "@/Components/Gallery/Timeline";
 import ScrollProgress from "@/Components/Global/ScrollProgress";
 
 export default function GalleryPage() {
@@ -7,7 +7,8 @@ export default function GalleryPage() {
         <main className="min-h-screen bg-white">
             <ScrollProgress />
             <GalleryHero />
-            <GalleryGrid />
+            <Timeline />
+
         </main>
     );
 }
