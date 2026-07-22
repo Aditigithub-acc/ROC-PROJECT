@@ -2,6 +2,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 const blogPosts = [
     {
@@ -28,6 +29,7 @@ const blogPosts = [
 ];
 
 export default function Blog() {
+    const router = useRouter();
     return (
         <section className="py-24 bg-white" id="blog">
             <div className="max-w-[1200px] mx-auto px-4 lg:px-8">
@@ -55,7 +57,7 @@ export default function Blog() {
                     {blogPosts.map((post, index) => {
                         const isEven = index % 2 === 0;
                         return (
-                            <motion.div 
+                            <motion.div
                                 key={post.id}
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -66,9 +68,9 @@ export default function Blog() {
                                 {/* Image Side */}
                                 <div className="w-full lg:w-1/2 rounded-2xl overflow-hidden shadow-lg border border-gray-100 group">
                                     <div className="relative aspect-[4/3] w-full overflow-hidden bg-gray-100">
-                                        <img 
-                                            src={post.image} 
-                                            alt={post.title} 
+                                        <img
+                                            src={post.image}
+                                            alt={post.title}
                                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out"
                                         />
                                     </div>
@@ -83,7 +85,8 @@ export default function Blog() {
                                     <p className="text-gray-600 leading-relaxed text-lg">
                                         {post.excerpt}
                                     </p>
-                                    <button className="text-[#da2929] font-bold text-sm uppercase tracking-wider hover:text-red-700 transition-colors flex items-center gap-2 mt-4">
+                                    <button className="text-[#da2929] font-bold text-sm uppercase tracking-wider hover:text-red-700 transition-colors flex items-center gap-2 mt-4"
+                                        onClick={() => router.push("/apply")}>
                                         Read More
                                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                                     </button>
