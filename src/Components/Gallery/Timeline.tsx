@@ -12,67 +12,67 @@ interface TimelineEvent {
 
 const timelineEvents: TimelineEvent[] = [
     {
-        year: "2008",
-        date: "September 25th",
-        title: "Day We Met Each Other",
+        year: "Retail",
+        date: "Customer Loyalty Program",
+        title: "Omnichannel Loyalty & Rewards Platform",
         description:
-            "Maecenas porta nulla eget eros pharetra ullamcorper. Maecenas tortor erat, egestas id viverra non, volutpat at nunc.",
+            "A growing retail brand wanted to strengthen customer retention by introducing a unified loyalty programme across its online and offline stores.",
         details:
-            "Donec luctus, nisi vitae semper fermentum, lorem libero elementum justo, ac congue leo augue eget erat.",
+            "We developed a digital loyalty platform that enabled customers to earn and redeem reward points, access exclusive offers, and receive personalised promotions. The solution created a seamless shopping experience across multiple channels while increasing repeat purchases and long-term customer engagement.",
     },
     {
-        year: "2009",
-        date: "January 10th",
-        title: "Our First Song",
+        year: "Manufacturing",
+        date: "Channel Partner Rewards",
+        title: "Dealer Performance Incentive Portal",
         description:
-            "Praesent porttitor consectetur arcu ut malesuada. Etiam condimentum, lacus vitae lacinia tempus, felis massa interdum enim.",
+            "A leading manufacturing company needed a transparent incentive programme to motivate dealers and distributors while improving sales visibility across its partner network.",
         details:
-            "Quisque accumsan aliquam aliquam, sit amet molestie tellus hendrerit quis.",
+            "We built a secure dealer rewards portal featuring performance tracking, milestone-based incentives, digital reward redemption, and comprehensive reporting. The platform simplified programme management, enhanced partner engagement, and provided real-time insights into channel performance.",
     },
     {
-        year: "2010",
-        date: "June 2nd",
-        title: "Our First Trip",
+        year: "Gov",
+        date: "GeM Rewards Programme",
+        title: "Public Sector Incentive Platform",
         description:
-            "Sed tincidunt, nisl ac tempus luctus, nulla est pulvinar diam, non vehicula orci ipsum ut dolor.",
+            "A government organisation required a fully compliant rewards solution that could be procured and managed entirely through the GeM ecosystem.",
         details:
-            "Maecenas facilisis metus id mauris accumsan vehicula. Nam lacinia consequat justo quis mollis.",
+            "We implemented a GeM-compliant digital rewards platform with audit-ready reporting, transparent programme management, and streamlined procurement, ensuring compliance while simplifying administration.",
     },
     {
-        year: "2013",
-        date: "May 1st",
-        title: "Our Wedding",
+        year: "Bank",
+        date: "Employee Recognition",
+        title: "Recognition & Rewards Portal",
         description:
-            "Praesent porttitor consectetur arcu ut malesuada. Etiam condimentum, lacus vitae lacinia tempus, felis massa interdum enim.",
+            "A private banking institution wanted to create a continuous recognition culture that extended beyond annual performance reviews.",
         details:
-            "Aliquam libero nisl in sapien. Quisque accumsan aliquam aliquam.",
+            "Our secure recognition platform enabled peer-to-peer appreciation, long-service awards, and points-based rewards, providing employees with real-time recognition while giving management complete programme visibility.",
     },
     {
-        year: "2013",
-        date: "May 1st",
-        title: "Our Wedding",
+        year: "Telec",
+        date: "Dealer & Channel Incentives",
+        title: "Distribution Rewards Platform",
         description:
-            "Praesent porttitor consectetur arcu ut malesuada. Etiam condimentum, lacus vitae lacinia tempus, felis massa interdum enim.",
+            "A national telecom operator required a transparent rewards programme to keep regional distributors engaged and motivated in a highly competitive market.",
         details:
-            "Aliquam libero nisl in sapien. Quisque accumsan aliquam aliquam.",
+            "We built a dealer rewards portal with tiered incentive structures, real-time performance tracking, and instant redemption for electronics and gift cards, creating a seamless and engaging incentive experience for channel partners.",
     },
     {
-        year: "2013",
-        date: "May 1st",
-        title: "Our Wedding",
+        year: "FMCG",
+        date: "Sales Incentive Program",
+        title: "National Distributor Incentive Platform",
         description:
-            "Praesent porttitor consectetur arcu ut malesuada. Etiam condimentum, lacus vitae lacinia tempus, felis massa interdum enim.",
+            "A leading FMCG brand needed to modernise its incentive programme for a geographically distributed sales network, replacing manual spreadsheet tracking with a faster and more transparent solution.",
         details:
-            "Aliquam libero nisl in sapien. Quisque accumsan aliquam aliquam.",
+            "We developed a branded digital incentive portal featuring real-time milestone tracking, automated reward calculations, and instant e-voucher payouts. The platform significantly reduced payout turnaround times while improving sales engagement and programme visibility across the distributor network.",
     },
     {
-        year: "2013",
-        date: "May 1st",
-        title: "Our Wedding",
+        year: "Healthcare",
+        date: "Healthcare Rewards Program",
+        title: "Healthcare Professional Engagement Platform",
         description:
-            "Praesent porttitor consectetur arcu ut malesuada. Etiam condimentum, lacus vitae lacinia tempus, felis massa interdum enim.",
+            "A healthcare organisation sought a secure and transparent rewards programme to engage healthcare professionals, encourage participation in educational initiatives, and recognise ongoing contributions.",
         details:
-            "Aliquam libero nisl in sapien. Quisque accumsan aliquam aliquam.",
+            "We developed a digital engagement platform with milestone-based rewards, secure user management, instant digital voucher redemption, and comprehensive reporting. The solution streamlined programme administration, improved participant engagement, and provided complete visibility into campaign performance while maintaining compliance standards.",
     },
 ];
 
@@ -104,7 +104,7 @@ export default function Timeline() {
                                     whileHover={{ y: -6 }}
                                     className="group rounded-[32px] border border-slate-200/80 bg-white shadow-[0_28px_80px_rgba(15,23,42,0.08)] transition-all duration-500 hover:-translate-y-1 hover:border-[#da2929]/30 hover:shadow-[0_35px_120px_rgba(218,41,41,0.16)]"
                                 >
-                                    <div className="p-8 lg:p-10">
+                                    <div className="p-8 lg:p-10 text-left">
                                         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
                                             <p className="text-sm uppercase tracking-[0.35em] text-[#da2929] font-black">
                                                 {item.title}
@@ -137,7 +137,7 @@ export default function Timeline() {
                                             <div className="absolute top-0 left-1/2 -translate-x-1/2 h-full w-px bg-[#da2929]/20" />
                                         </div>
                                         <div className="relative z-10 flex items-center justify-center">
-                                            <div className="flex h-[72px] w-[72px] items-center justify-center rounded-full bg-[#da2929] text-white font-black uppercase tracking-[0.28em] shadow-[0_20px_60px_rgba(218,41,41,0.25)]">
+                                            <div className="flex h-[72px] w-[72px] items-center justify-center rounded-full bg-[#da2929] text-white font-black uppercase tracking-[0.11em] shadow-[0_20px_60px_rgba(218,41,41,0.25)]">
                                                 {item.year}
                                             </div>
                                         </div>
