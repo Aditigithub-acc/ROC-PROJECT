@@ -67,7 +67,7 @@ const Brand = memo(() => {
                     {doubledBrands.map((brand, index) => (
                         <div
                             key={index}
-                            className="flex items-center gap-4 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-default"
+                            className="flex items-center gap-4 cursor-default"
                         >
                             {/* Brand Logo */}
                             <div className="h-20 lg:h-24 rounded-xl bg-white flex items-center justify-center overflow-hidden border border-gray-200 shadow-sm relative shrink-0">

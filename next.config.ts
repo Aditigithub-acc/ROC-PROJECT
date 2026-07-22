@@ -17,6 +17,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "image.lexica.art",
       },
+      {
+        protocol: "https",
+        hostname: "placehold.co",
+      },
     ],
   },
 };

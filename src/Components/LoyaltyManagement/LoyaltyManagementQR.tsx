@@ -98,7 +98,7 @@ export default function LoyaltyManagementQR() {
                             <motion.img 
                                 whileHover={{ scale: 1.05 }}
                                 transition={{ duration: 0.7 }}
-                                src="https://images.unsplash.com/photo-1595089309712-426b3a325021?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                                src="https://images.unsplash.com/photo-1526045612212-70cb35976638?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
                                 alt="QR Code Scanning" 
                                 className="w-full h-auto object-cover rounded-3xl"
                             />

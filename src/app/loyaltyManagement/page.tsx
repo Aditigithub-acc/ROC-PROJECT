@@ -18,11 +18,8 @@ export default function LoyaltyManagement() {
             <LoyaltyManagementHero />
             <LoyaltyManagementVideo />
             <LoyaltyManagementcontent />
-
-
             <LoyaltyManagementQR />
             <LoyaltyManagementTransfers />
-
             <Testimonials />
             <CTA />
         </main>
