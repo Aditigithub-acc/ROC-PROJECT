@@ -7,6 +7,7 @@ import Navbar from "@/Components/Global/Navbar";
 import CTA from "@/Components/Global/CTA";
 import ScrollProgress from "@/Components/Global/ScrollProgress";
 import DealerDistributionVideo from "@/Components/DealerDistribution/DealerDistributionVideo";
+import LoyaltyManagementcontent from "@/Components/LoyaltyManagement/LoyaltyManagementcontent";
 export default function DealerDistribution() {
     return (
         <div>
@@ -14,6 +15,7 @@ export default function DealerDistribution() {
             <ScrollProgress />
             <DealerDistributionHero />
             <DealerDistributionVideo />
+            <LoyaltyManagementcontent />
             <CustomerNetworkManagement />
             <OrderManagement />
             <SalesTargetsManagement />
