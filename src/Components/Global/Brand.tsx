@@ -5,26 +5,26 @@ import { memo } from "react";
 import { motion } from "framer-motion";
 
 const brands = [
-    { name: "Apple", logo: "https://placehold.co/100x100?text=Apple" },
-    { name: "Google", logo: "https://placehold.co/100x100?text=Google" },
-    { name: "Microsoft", logo: "https://placehold.co/100x100?text=MSFT" },
-    { name: "Netflix", logo: "https://placehold.co/100x100?text=NFLX" },
-    { name: "Meta", logo: "https://placehold.co/100x100?text=Meta" },
-    { name: "Tesla", logo: "https://placehold.co/100x100?text=Tesla" },
-    { name: "SpaceX", logo: "https://placehold.co/100x100?text=SPCX" },
-    { name: "Airbnb", logo: "https://placehold.co/100x100?text=ABNB" },
-    { name: "Uber", logo: "https://placehold.co/100x100?text=Uber" },
-    { name: "Lyft", logo: "https://placehold.co/100x100?text=Lyft" },
-    { name: "Stripe", logo: "https://placehold.co/100x100?text=Stripe" },
-    { name: "Spotify", logo: "https://placehold.co/100x100?text=SPOT" },
-    { name: "Sony", logo: "https://placehold.co/100x100?text=Sony" },
-    { name: "Nvidia", logo: "https://placehold.co/100x100?text=NVDA" },
-    { name: "Intel", logo: "https://placehold.co/100x100?text=Intel" },
-    { name: "AMD", logo: "https://placehold.co/100x100?text=AMD" },
-    { name: "Dell", logo: "https://placehold.co/100x100?text=Dell" },
-    { name: "HP", logo: "https://placehold.co/100x100?text=HP" },
-    { name: "Lenovo", logo: "https://placehold.co/100x100?text=Lenovo" },
-    { name: "Asus", logo: "https://placehold.co/100x100?text=Asus" }
+    { name: "ACC Cement", logo: "/Logo/acc-cement.jpeg" },
+    { name: "Asian Paints", logo: "/Logo/asian-paints.png" },
+    { name: "Chandigarh University", logo: "/Logo/chandigarh-university.png" },
+    { name: "Hindustan Unilever Limited", logo: "/Logo/hindustan-unilever.jpeg" },
+    { name: "Greystar", logo: "/Logo/greystar.jpeg" },
+    { name: "Netsmartz", logo: "/Logo/netsmartz.jpeg" },
+    { name: "Videocon Connect", logo: "/Logo/videocon.avif" },
+    { name: "Fortis Hospital", logo: "/Logo/fortis-hospitals.png" },
+    { name: "Glenmark", logo: "/Logo/glenmark.png" },
+    { name: "Vodafone Idea", logo: "/Logo/vodafone.png" },
+    { name: "JLPL", logo: "/Logo/jlpl.png" },
+    { name: "Mahindra & Mahindra", logo: "/Logo/mahindra.png" },
+    { name: "Orient Electric", logo: "/Logo/orient-electric.jpeg" },
+    { name: "Rallis India Limited", logo: "/Logo/rallis-india-limited.png" },
+    { name: "SBI", logo: "/Logo/sbi.jpeg" },
+    { name: "SML", logo: "/Logo/sml_ISUZU.jpeg" },
+    { name: "ISUZU", logo: "/Logo/" },
+    { name: "Syngenta India Limited", logo: "/Logo/syngenta.jpeg" },
+    { name: "Venus", logo: "/Logo/venus.png" },
+    { name: "Remedies", logo: "/Logo/" }
 ];
 
 const Brand = memo(() => {

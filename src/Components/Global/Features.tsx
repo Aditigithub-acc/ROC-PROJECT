@@ -62,7 +62,7 @@ const services: ServiceItem[] = [
             {
                 title: "Trust and Scale",
                 description: "Building trust through quality education while empowering students to achieve greater growth and long-term success.",
-                image: "https://images.unsplash.com/photo-1515161318750-781d6122e367?auto=format&fit=crop&w=600&q=80"
+                image: "https://plus.unsplash.com/premium_photo-1723672828187-0b2937b08c87?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             },
             {
                 title: "Trusted Growth",

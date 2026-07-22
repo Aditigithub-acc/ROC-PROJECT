@@ -5,28 +5,28 @@ import { memo } from "react";
 import { motion } from "framer-motion";
 
 const partners = [
-    { name: "Amazon", logo: "https://placehold.co/100x100?text=AMZN" },
-    { name: "Bajaj", logo: "https://placehold.co/100x100?text=Bajaj" },
-    { name: "BoAt", logo: "https://placehold.co/100x100?text=BoAt" },
-    { name: "Cello", logo: "https://placehold.co/100x100?text=Cello" },
-    { name: "Cross", logo: "https://placehold.co/100x100?text=Cross" },
-    { name: "Faber", logo: "https://placehold.co/100x100?text=Faber" },
-    { name: "Havells", logo: "https://placehold.co/100x100?text=HVL" },
+    { name: "Amazon", logo: "/Logo/amazon.webp" },
+    { name: "Bajaj", logo: "/Logo/Bajaj.webp" },
+    { name: "BoAt", logo: "/Logo/Boat.jpeg" },
+    { name: "Cello", logo: "/Logo/cello.jpeg" },
+    { name: "Cross", logo: "/Logo/" },
+    { name: "Faber", logo: "/Logo/Faber.png" },
+    { name: "Havells", logo: "/Logo/Havells" },
     { name: "Jack & Jones", logo: "https://placehold.co/100x100?text=J%26J" },
-    { name: "JBL", logo: "https://placehold.co/100x100?text=JBL" },
+    { name: "JBL", logo: "/Logo/JBL-Logo.webp" },
     { name: "LG", logo: "https://placehold.co/100x100?text=LG" },
-    { name: "Luxor", logo: "https://placehold.co/100x100?text=Luxor" },
-    { name: "Nasher Miles", logo: "https://placehold.co/100x100?text=NM" },
-    { name: "Pepe Jeans", logo: "https://placehold.co/100x100?text=Pepe" },
-    { name: "Portronics", logo: "https://placehold.co/100x100?text=Port" },
-    { name: "Safari", logo: "https://placehold.co/100x100?text=Safari" },
-    { name: "Samsung", logo: "https://placehold.co/100x100?text=SMG" },
-    { name: "Titan", logo: "https://placehold.co/100x100?text=Titan" },
-    { name: "Timex", logo: "https://placehold.co/100x100?text=Timex" },
-    { name: "Toreto", logo: "https://placehold.co/100x100?text=Toreto" },
-    { name: "Welspun", logo: "https://placehold.co/100x100?text=WLS" },
-    { name: "Whirlpool", logo: "https://placehold.co/100x100?text=WHL" },
-    { name: "Wildcraft", logo: "https://placehold.co/100x100?text=Wild" }
+    { name: "Luxor", logo: "/Logo/Luxor-Logo.jpeg" },
+    { name: "Nasher Miles", logo: "/Logo/nasher-miles.jpeg" },
+    { name: "Pepe Jeans", logo: "/Logo/pepe-jeans.png" },
+    { name: "Portronics", logo: "/Logo/Portronics.jpeg" },
+    { name: "Safari", logo: "/Logo/Safari.png" },
+    { name: "Samsung", logo: "/Logo/Samsung.avif" },
+    { name: "Titan", logo: "/Logo/Titan.jpeg" },
+    { name: "Timex", logo: "/Logo/Timex.png" },
+    { name: "Toreto", logo:"/Logo/Toreto.png" },
+    { name: "Welspun", logo: "/Logo/Welspun.jpeg" },
+    { name: "Whirlpool", logo: "/Logo/Whirlpool.png" },
+    { name: "Wildcraft", logo: "/Logo/the-wildcraft.png" }
 ];
 
 const Partners = memo(() => {
