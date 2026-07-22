@@ -86,7 +86,7 @@ export default function Blog() {
                                         {post.excerpt}
                                     </p>
                                     <button className="text-[#da2929] font-bold text-sm uppercase tracking-wider hover:text-red-700 transition-colors flex items-center gap-2 mt-4"
-                                        onClick={() => router.push("/apply")}>
+                                        onClick={() => router.push("/sales")}>
                                         Read More
                                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                                     </button>
