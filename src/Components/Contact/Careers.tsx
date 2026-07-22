@@ -109,7 +109,7 @@ export default function Careers() {
                             </div>
                             <div className="mt-8 pt-6 border-t border-gray-100">
                                 <button
-                                    onClick={() => router.push("/contact")}
+                                    onClick={() => router.push("/apply")}
                                     className="w-full py-3 px-6 bg-gray-900 text-white rounded-xl font-bold hover:bg-[#da2929] transition-colors duration-300 shadow-md"
                                 >
                                     Apply Now
