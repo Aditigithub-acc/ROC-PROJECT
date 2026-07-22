@@ -72,11 +72,11 @@ const Partners = memo(() => {
                             className="flex items-center gap-4 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-default"
                         >
                             {/* Partner Logo */}
-                            <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-xl bg-gray-200 flex items-center justify-center overflow-hidden border border-gray-300 shadow-sm relative">
+                            <div className="h-14 lg:h-16 min-w-[3.5rem] lg:min-w-[4rem] rounded-xl bg-white flex items-center justify-center overflow-hidden border border-gray-200 shadow-sm relative shrink-0 px-2">
                                 <img
                                     src={partner.logo}
                                     alt={partner.name}
-                                    className="w-full h-full object-contain p-2"
+                                    className="max-h-full w-auto object-contain py-1.5 mix-blend-multiply"
                                     onError={(e) => {
                                         // Fallback to initials if image fails to load
                                         e.currentTarget.style.display = 'none';
@@ -85,7 +85,7 @@ const Partners = memo(() => {
                                         }
                                     }}
                                 />
-                                <div className="absolute inset-0 hidden items-center justify-center font-black text-xs text-gray-600 bg-gray-200">
+                                <div className="absolute inset-0 hidden items-center justify-center font-black text-xs text-gray-600 bg-gray-100">
                                     {partner.name.split(' ').map(word => word[0]).join('').slice(0, 2)}
                                 </div>
                             </div>
