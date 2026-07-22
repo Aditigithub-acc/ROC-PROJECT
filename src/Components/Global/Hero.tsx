@@ -13,7 +13,7 @@ const Hero = memo(() => {
         loop
         playsInline
       >
-        <source src="/scrollvideos/hero-video.mp4" type="video/mp4" />
+        <source src="/scrollvideos/finalvideo.mp4" type="video/mp4" />
       </video>
 
       <div />
