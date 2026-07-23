@@ -13,47 +13,27 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
     {
-        name: "Arjun Sharma",
-        role: "Oxford University Alumnus",
+        name: "Amit Sharma",
+        role: "Sales Head, Building Materials Industry",
         university: "University of Oxford, UK",
-        text: "The guidance I received was pivotal. They didn't just help me apply; they helped me find my voice and express my true potential. The transition from India to Oxford was seamless thanks to their expertise.",
+        text: "Rewards On Click has completely transformed how we engage with our dealers. The QR-based rewards system is simple to use, payouts are quick, and the dashboard gives us complete visibility into every campaign. Their support team has been responsive from day one.",
         initials: "AS"
     },
     {
-        name: "Sanya Gupta",
-        role: "MIT Graduate '23",
+        name: "Neha Verma",
+        role: "Channel Marketing Manager, Consumer Electronics",
         university: "Massachusetts Institute of Technology, USA",
-        text: "I was overwhelmed by the choices until I met my mentors. Their data-driven approach combined with genuine care made all the difference. I couldn't have secured my place at MIT without their support.",
-        initials: "SG"
+        text: "We were looking for a loyalty platform that was easy to deploy and scalable. Rewards On Click delivered exactly that. Campaign management, reward tracking, and analytics are all available in one place, making our channel engagement more effective than ever.",
+        initials: "NV"
     },
     {
-        name: "Rohan Varma",
-        role: "Stanford Researcher",
+        name: "Rahul Mehta",
+        role: "Business Development Manager, Industrial Solutions",
         university: "Stanford University, USA",
-        text: "A truly professional and transformative experience. They specialize in finding the perfect fit between a student's ambition and the world's best institutions. Highly recommend for serious candidates.",
-        initials: "RV"
+        text: "The implementation process was smooth, and the platform has significantly improved dealer participation in our reward programs. The real-time reporting and excellent customer support make Rewards On Click a reliable technology partner.",
+        initials: "RM"
     },
-    {
-        name: "Priya Nair",
-        role: "LSE Graduate",
-        university: "London School of Economics, UK",
-        text: "Navigating the LSE application was complex, but my counselor made it feel like a breeze. Their insight into what the admissions committee looks for is unparalleled.",
-        initials: "PN"
-    },
-    {
-        name: "Karthik Raja",
-        role: "MBA Candidate, INSEAD",
-        university: "INSEAD, France/Singapore",
-        text: "The MBA journey is as much about self-discovery as it is about prestige. They helped me distill my career goals into a compelling narrative that resonated with INSEAD.",
-        initials: "KR"
-    },
-    {
-        name: "Ishani Bose",
-        role: "PhD Scholar, ETH Zurich",
-        university: "ETH Zurich, Switzerland",
-        text: "Securing a PhD position in Europe requires more than just good grades. Their advice on my research proposal and interview prep was instrumental in my success.",
-        initials: "IB"
-    }
+
 ];
 
 const TestimonialCard = memo(({ testimonial }: { testimonial: Testimonial }) => {
