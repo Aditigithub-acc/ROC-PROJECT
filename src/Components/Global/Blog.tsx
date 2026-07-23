@@ -19,7 +19,7 @@ const blogPosts = [
         excerpt: "Explore the most promising career fields for the next decade, from sustainable engineering to advanced artificial intelligence. Plan your studies around high-demand skills.",
         image: "https://placehold.co/600x400/2952da/ffffff?text=Career+Opportunities",
         date: "June 28, 2026",
-        link: "/blog/career-opportunities", // Placeholder distinct link
+        link: "/blogpage2", // Placeholder distinct link
     },
     {
         id: 3,
@@ -27,7 +27,7 @@ const blogPosts = [
         excerpt: "Practical tips and strategies for high school students and parents to manage the anxiety of the university application process and stay focused on what truly matters.",
         image: "https://placehold.co/600x400/29da8f/ffffff?text=Stress+Management",
         date: "May 15, 2026",
-        link: "/blog/admissions-stress", // Placeholder distinct link
+        link: "/blogpage3", // Placeholder distinct link
     }
 ];
 
