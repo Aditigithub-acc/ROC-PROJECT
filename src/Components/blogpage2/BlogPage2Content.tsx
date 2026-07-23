@@ -12,33 +12,8 @@ export default function BlogPage2Content() {
     return (
         <section className="w-full bg-white py-16 lg:py-24">
             <div className="max-w-4xl mx-auto px-4 lg:px-8 space-y-12 text-gray-700 text-lg leading-relaxed">
-                
-                <motion.div 
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, margin: "-100px" }}
-                    variants={textVariants}
-                    className="space-y-6"
-                >
-                    <p className="text-xl text-gray-800 font-medium leading-loose">
-                        Most sales contests begin with the same ambition: drive more sales, create excitement, and get the field team focused on a specific target. A brand launches a contest, announces the prize, shares the rules, and expects energy to build across the market.
-                    </p>
-                    <p>For a few days, it does.</p>
-                    <p>
-                        Then the pattern becomes familiar. The same top performers move ahead. Sales executives in stronger territories get an early advantage. Distributor salesmen working in slower markets feel they cannot catch up. Retail counter staff or dealer sales teams lose interest because the contest feels built for someone else.
-                    </p>
-                    <p className="font-bold text-[#da2929] text-xl">That is where many sales contests fail.</p>
-                    <p>
-                        For brands, the goal should not be to reward only the highest seller. The real opportunity is to motivate the entire sales ecosystem: sales executives, distributor sales teams, dealer salesmen, retail staff, promoters, and channel partners who influence what gets sold every day.
-                    </p>
-                    <p>
-                        At BigCity, we look at sales contest ideas from this practical field-sales lens. A strong sales incentive contest should push performance, but it should also make more people believe they have a reason to participate.
-                    </p>
-                </motion.div>
 
-                <hr className="border-gray-200" />
-
-                <motion.div 
+                <motion.div
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, margin: "-100px" }}
@@ -47,36 +22,46 @@ export default function BlogPage2Content() {
                 >
                     <h2 className="text-3xl font-bold text-gray-900 group flex items-center gap-3">
                         <span className="w-2 h-8 bg-[#da2929] rounded-full group-hover:h-10 transition-all duration-300"></span>
-                        Why Traditional Sales Contests Fail in the Field
+                        Introduction
                     </h2>
                     <p>
-                        Many sales contests are built only around total sales value. While sales value is important, it often gives an automatic advantage to people who already have stronger territories, high-demand counters, better distributor support, or faster-moving products.
+                        Instant rewards are becoming a powerful engagement lever for loyalty, incentive and recognition programs. Customers, dealers, employees and channel partners no longer want to wait weeks to receive the value they have earned. They expect rewards to be fast, simple and easy to redeem.
                     </p>
                     <p>
-                        This creates a predictable contest. Top performers stay excited, but the rest of the team quietly checks out.
+                        This shift matters because loyalty programs are no longer judged only by points issued. They are judged by participation, redemption, repeat engagement and the speed at which a rewarded action turns into the next action.
                     </p>
-                    
+                    <p>
+                        As CarltonOne puts it, &ldquo;Speed isn&rsquo;t just a preference anymore. It&rsquo;s becoming an expectation.&rdquo; That is exactly why brands are rethinking loyalty rewards around instant fulfilment, digital rewards and mobile-first redemption.
+                    </p>
+                </motion.div>
+
+                <hr className="border-gray-200" />
+
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-100px" }}
+                    variants={textVariants}
+                    className="space-y-6"
+                >
+                    <h2 className="text-3xl font-bold text-gray-900 group flex items-center gap-3">
+                        <span className="w-2 h-8 bg-[#da2929] rounded-full group-hover:h-10 transition-all duration-300"></span>
+                        What Are Instant Rewards?
+                    </h2>
+                    <p>
+                        Instant rewards are rewards that can be issued, received and redeemed quickly after a customer or partner completes a desired action. In loyalty programs, this could mean rewarding a customer immediately after a purchase, giving a dealer a digital voucher after achieving a sales milestone, or sending an employee an e-gift card after a recognition moment.
+                    </p>
+                    <p>
+                        Common instant reward options include digital vouchers, e-gift cards, UPI rewards, wallet payouts, prepaid cards, coupon codes and instant redemption options within an app or campaign landing page.
+                    </p>
                     <div className="bg-red-50 p-6 md:p-8 rounded-2xl border-l-4 border-[#da2929] hover:shadow-md transition-shadow">
-                        <h4 className="font-bold text-gray-900 mb-4">Common problems include:</h4>
-                        <ul className="space-y-3 list-disc list-inside marker:text-[#da2929]">
-                            <li>The same participants win every time.</li>
-                            <li>Smaller-market sales executives feel ignored.</li>
-                            <li>Newer salespeople do not get recognized for progress.</li>
-                            <li>Effort at the outlet level goes unnoticed.</li>
-                            <li>Reps in difficult territories feel the contest is unfair.</li>
-                            <li>Brands get a short-term sales push, but not wider engagement.</li>
-                        </ul>
+                        <p className="text-gray-700">
+                            For Indian loyalty programs, instant rewards work especially well because digital payments and mobile-first behaviour are already mainstream. <strong>Economic Times</strong> reported that UPI processed 22.72 billion transactions in June 2026, showing how deeply digital payment habits are embedded in everyday consumer behaviour.
+                        </p>
                     </div>
-
-                    <p>
-                        In field sales, performance is not shaped by effort alone. Territory size, product availability, retailer relationships, seasonality, local demand, and distributor support all matter. A good contest design should recognize this reality.
-                    </p>
-                    <p>
-                        That is why sales performance incentives need to reward both outcomes and behaviours. Sales matter, but so do invoice generation, outlet activation, product focus, repeat selling, range selling, claim discipline, and improvement over past performance.
-                    </p>
                 </motion.div>
 
-                <motion.div 
+                <motion.div
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, margin: "-100px" }}
@@ -85,39 +70,25 @@ export default function BlogPage2Content() {
                 >
                     <h2 className="text-3xl font-bold text-gray-900 group flex items-center gap-3">
                         <span className="w-2 h-8 bg-[#da2929] rounded-full group-hover:h-10 transition-all duration-300"></span>
-                        What Makes a Sales Contest Fair and Motivating?
+                        Why Instant Rewards Drive Faster Engagement
                     </h2>
                     <p>
-                        A fair contest does not mean everyone receives the same prize. It means every participant understands how to win and feels the goal is achievable.
+                        Instant rewards reduce the gap between action and gratification. When someone completes a purchase, scans a QR code, submits an invoice, refers a friend or reaches a milestone, a quick reward reinforces that behaviour while the moment is still fresh.
                     </p>
-                    
+                    <p>
+                        They also lower redemption friction. Instead of waiting for manual approval, courier delivery or complicated claims, users can receive digital rewards directly through SMS, WhatsApp, email, app notification or wallet transfer.
+                    </p>
+                    <p>
+                        This is especially useful for customer engagement rewards because faster fulfilment can encourage repeat actions. A customer who receives an instant voucher after purchase is more likely to return. A dealer who receives a quick payout after target achievement is more likely to stay active in the program.
+                    </p>
                     <div className="bg-gray-50 p-6 md:p-8 rounded-2xl hover:bg-white hover:shadow-lg transition-all duration-300 border border-gray-100">
-                        <h4 className="font-bold text-gray-900 mb-4">The strongest sales contests usually include:</h4>
-                        <ul className="space-y-4">
-                            {[
-                                { title: "Multiple ways to win", desc: "Reward sales, improvement, consistency, product focus, and team performance." },
-                                { title: "Clear rules", desc: "Participants should know which invoices, products, outlets, or milestones qualify." },
-                                { title: "Short contest windows", desc: "Weekly or monthly contests create urgency and keep attention high." },
-                                { title: "Transparent tracking", desc: "Participants need regular updates on where they stand." },
-                                { title: "Simple claiming", desc: "Invoice upload, validation, and reward redemption should be easy." },
-                                { title: "Relevant rewards", desc: "The prize should feel useful, exciting, and worth the effort." }
-                            ].map((item, i) => (
-                                <li key={i} className="flex items-start gap-3 group/item">
-                                    <span className="text-[#da2929] mt-1 group-hover/item:scale-125 transition-transform">✓</span>
-                                    <div>
-                                        <strong className="text-gray-900 group-hover/item:text-[#da2929] transition-colors">{item.title}:</strong> {item.desc}
-                                    </div>
-                                </li>
-                            ))}
-                        </ul>
+                        <p className="text-sm text-gray-600 italic">
+                            Deloitte&rsquo;s loyalty research also points to the importance of easy redemption and intuitive digital features in strengthening perceived value.
+                        </p>
                     </div>
-
-                    <p>
-                        For field teams, simplicity matters. If the contest needs too much explanation, participation drops. If rewards take too long, excitement fades. If the rules feel unfair, the contest becomes noise.
-                    </p>
                 </motion.div>
 
-                <motion.div 
+                <motion.div
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, margin: "-100px" }}
@@ -126,133 +97,145 @@ export default function BlogPage2Content() {
                 >
                     <h2 className="text-3xl font-bold text-gray-900 group flex items-center gap-3">
                         <span className="w-2 h-8 bg-[#da2929] rounded-full group-hover:h-10 transition-all duration-300"></span>
-                        Sales Contest Ideas by Objective
+                        Where Instant Rewards Fit in Loyalty Programs
                     </h2>
                     <p>
-                        The best sales competition ideas start with a clear business objective. A contest to increase outlet coverage should not look like a contest to push premium products. A contest for distributor salesmen should not be designed exactly like one for retail counter staff.
+                        Instant reward programs can be used across multiple engagement use cases.
                     </p>
-                    <p className="font-semibold text-gray-900">Here are practical formats brands can use.</p>
-                </motion.div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {[
-                        {
-                            title: "Sales Volume Contest Ideas",
-                            desc: "These contests work when the brand wants to drive higher sales within a fixed period.",
-                            points: [
-                                "Highest sales value contest",
-                                "Target achievement contest",
-                                "Product push contest",
-                                "Invoice-based contest"
-                            ]
-                        },
-                        {
-                            title: "Improvement-Based Ideas",
-                            desc: "Improvement-based contests are powerful because they motivate more than just the top few sellers.",
-                            points: [
-                                "Most improved sales executive",
-                                "Best territory growth",
-                                "Comeback challenge",
-                                "New seller progress challenge"
-                            ]
-                        },
-                        {
-                            title: "Activity-Based Contest Ideas",
-                            desc: "Activity-based contests are useful when the objective is better market coverage or more disciplined selling.",
-                            points: [
-                                "Most outlets visited",
-                                "Most invoices uploaded",
-                                "Most new outlets activated",
-                                "Most product demos completed"
-                            ]
-                        },
-                        {
-                            title: "Team-Based Contest Ideas",
-                            desc: "Team contests can create energy without making the program feel too individualistic.",
-                            points: [
-                                "Region vs region challenge",
-                                "Distributor team challenge",
-                                "Dealer sales team contest",
-                                "Buddy-up contest"
-                            ]
-                        }
-                    ].map((card, index) => (
-                        <motion.div 
-                            key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.1, duration: 0.5 }}
-                            className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-                        >
-                            <h3 className="text-xl font-bold text-[#da2929] mb-3">{card.title}</h3>
-                            <p className="text-sm text-gray-600 mb-4">{card.desc}</p>
-                            <ul className="space-y-2 text-sm text-gray-800">
-                                {card.points.map((pt, i) => (
-                                    <li key={i} className="flex items-center gap-2">
-                                        <span className="w-1.5 h-1.5 rounded-full bg-[#da2929]"></span>
-                                        {pt}
-                                    </li>
-                                ))}
-                            </ul>
-                        </motion.div>
-                    ))}
-                </div>
-
-                <motion.div 
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, margin: "-100px" }}
-                    variants={textVariants}
-                    className="space-y-6"
-                >
-                    <p className="italic bg-gray-50 p-6 rounded-xl border-l-4 border-gray-300 text-gray-600">
-                        *The Berger Paints sales incentive program is a good example of this approach. The program was designed for sales executives and linked participation to invoice-based sales. Sales executives could upload invoices, qualify against defined achievement slabs, and earn gift vouchers as rewards. This kind of structure works because it connects rewards directly to actual sales movement.
-                    </p>
-                </motion.div>
-
-                <motion.div 
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, margin: "-100px" }}
-                    variants={textVariants}
-                    className="space-y-6"
-                >
-                    <h2 className="text-3xl font-bold text-gray-900 group flex items-center gap-3">
-                        <span className="w-2 h-8 bg-[#da2929] rounded-full group-hover:h-10 transition-all duration-300"></span>
-                        Reward Ideas That Motivate Field Sales Teams
-                    </h2>
-                    <p>
-                        The reward should match the audience. Sales executives, dealer salesmen, distributor teams, and retail staff are often motivated by rewards that are useful, quick to receive, and easy to redeem.
-                    </p>
-                    <p className="font-semibold text-gray-900">
-                        This is where BigCity helps brands design the right reward mix.
-                    </p>
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {[
-                            "Digital gift vouchers",
-                            "UPI, wallet, or prepaid rewards",
-                            "Shopping, food, fuel, and lifestyle vouchers",
-                            "Merchandise rewards (electronics, gadgets)",
-                            "Experiential rewards (dining, travel)",
-                            "Premium gifts for top performers",
-                            "Team rewards (meals, celebrations)",
-                            "Choice-based rewards catalogue"
-                        ].map((reward, idx) => (
-                            <li key={idx} className="flex items-center gap-3 bg-red-50/50 p-3 rounded-lg hover:bg-red-50 transition-colors">
-                                <span className="text-[#da2929]">✦</span>
-                                <span className="text-sm font-medium text-gray-800">{reward}</span>
-                            </li>
+                            {
+                                title: "Customer Loyalty Programs",
+                                points: ["Purchases & referrals", "App downloads & reviews", "Feedback & repeat visits", "Festive campaigns"]
+                            },
+                            {
+                                title: "Dealer & Distributor Incentives",
+                                points: ["Invoice uploads", "Product focus & secondary sales", "Scheme participation", "Target completion"]
+                            },
+                            {
+                                title: "Employee Recognition",
+                                points: ["Timely appreciation", "Behaviour-linked rewards", "Peer recognition", "Milestone celebrations"]
+                            },
+                            {
+                                title: "Sales & Channel Partner Incentives",
+                                points: ["Short-term contests", "Milestone-based rewards", "Performance nudges", "Real-time payouts"]
+                            }
+                        ].map((card, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.1, duration: 0.5 }}
+                                className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                            >
+                                <h3 className="text-xl font-bold text-[#da2929] mb-3">{card.title}</h3>
+                                <ul className="space-y-2 text-sm text-gray-800">
+                                    {card.points.map((pt, i) => (
+                                        <li key={i} className="flex items-center gap-2">
+                                            <span className="w-1.5 h-1.5 rounded-full bg-[#da2929]"></span>
+                                            {pt}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </motion.div>
                         ))}
+                    </div>
+                </motion.div>
+
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-100px" }}
+                    variants={textVariants}
+                    className="space-y-6"
+                >
+                    <h2 className="text-3xl font-bold text-gray-900 group flex items-center gap-3">
+                        <span className="w-2 h-8 bg-[#da2929] rounded-full group-hover:h-10 transition-all duration-300"></span>
+                        Instant Rewards vs Physical Rewards
+                    </h2>
+                    <p>
+                        Instant digital rewards win on speed, convenience and fulfilment efficiency. They are easier to issue at scale, easier to track and often better suited for high-frequency engagement.
+                    </p>
+                    <p>
+                        Physical rewards, merchandise, experiences and premium gifts still matter. They can create stronger memory, higher perceived value and emotional recall, especially for major milestones. CarltonOne makes this distinction clearly: instant rewards work well for immediacy, while physical rewards can work better for memorability.
+                    </p>
+                    <div className="bg-red-50 p-6 md:p-8 rounded-2xl border-l-4 border-[#da2929] hover:shadow-md transition-shadow">
+                        <p className="text-gray-700 font-semibold">
+                            The best loyalty rewards strategy is not digital versus physical. It is using the right reward for the right moment. Use instant rewards for frequent actions and premium rewards for high-value achievements.
+                        </p>
+                    </div>
+                </motion.div>
+
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-100px" }}
+                    variants={textVariants}
+                    className="space-y-6"
+                >
+                    <h2 className="text-3xl font-bold text-gray-900 group flex items-center gap-3">
+                        <span className="w-2 h-8 bg-[#da2929] rounded-full group-hover:h-10 transition-all duration-300"></span>
+                        How to Design an Instant Rewards Program
+                    </h2>
+                    <p>
+                        Start by defining the target audience and the behaviour you want to reward. A customer program may reward purchases or referrals. A dealer program may reward sales milestones. An employee program may reward recognition moments.
+                    </p>
+                    <p>
+                        Next, set clear earning rules and redemption thresholds. Users should know what they need to do, what they will earn and when they will receive it.
+                    </p>
+                    <p>
+                        Build a reward catalogue with useful digital and physical options. Include e-vouchers, UPI rewards, prepaid cards, coupons and selected premium rewards where needed.
+                    </p>
+                    <p>
+                        Use mobile-first redemption and real-time communication. WhatsApp, SMS, app push and email can all help users receive and redeem rewards faster.
+                    </p>
+                    <p>
+                        Finally, plan fraud checks, budget controls and fulfilment SLAs. Instant fulfilment should still be governed by clear eligibility checks, spend caps, approval rules and reporting.
+                    </p>
+                </motion.div>
+
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-100px" }}
+                    variants={textVariants}
+                    className="space-y-6"
+                >
+                    <h2 className="text-3xl font-bold text-gray-900 group flex items-center gap-3">
+                        <span className="w-2 h-8 bg-[#da2929] rounded-full group-hover:h-10 transition-all duration-300"></span>
+                        Common Mistakes to Avoid
+                    </h2>
+                    <ul className="space-y-4 list-disc list-inside marker:text-[#da2929]">
+                        <li>Avoid offering only generic rewards. Instant does not mean low-value or irrelevant. The reward still needs to match the audience.</li>
+                        <li>Do not create complicated redemption steps. If the user has to fill multiple forms, wait for manual confirmation or chase support, the &ldquo;instant&rdquo; promise breaks.</li>
+                        <li>Brands should also avoid ignoring regional payment and fulfilment preferences. In India, UPI, wallets, vouchers and mobile-first redemption can be highly relevant.</li>
+                        <li>Most importantly, do not treat instant rewards as a replacement for all high-value rewards. Instant rewards are best for speed and participation. Premium rewards are still useful for recognition, loyalty and long-term motivation.</li>
                     </ul>
-                    <p className="mt-6">
-                        The strongest reward strategy is tiered. Instant rewards keep daily and weekly energy high. Merchandise and experiences make bigger milestones aspirational. Premium rewards add status to the largest achievements.
+                </motion.div>
+
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-100px" }}
+                    variants={textVariants}
+                    className="space-y-6"
+                >
+                    <h2 className="text-3xl font-bold text-gray-900 group flex items-center gap-3">
+                        <span className="w-2 h-8 bg-[#da2929] rounded-full group-hover:h-10 transition-all duration-300"></span>
+                        KPIs to Track
+                    </h2>
+                    <p>
+                        Track participation rate, redemption rate, time to reward fulfilment, repeat engagement and cost per rewarded action.
+                    </p>
+                    <p>
+                        For deeper measurement, brands should also track reward breakage, repeat purchase rate, referral completion, dealer activity, campaign ROI and user drop-off points in the redemption journey.
                     </p>
                 </motion.div>
 
                 <hr className="border-gray-200" />
 
-                <motion.div 
+                <motion.div
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, margin: "-100px" }}
@@ -261,18 +244,37 @@ export default function BlogPage2Content() {
                 >
                     <h2 className="text-3xl font-bold text-gray-900 group flex items-center gap-3">
                         <span className="w-2 h-8 bg-[#da2929] rounded-full group-hover:h-10 transition-all duration-300"></span>
-                        The BigCity View
+                        FAQs
                     </h2>
-                    <p>
-                        Field sales engagement is not driven by one intervention alone. It requires a single system that helps brands communicate with sales teams, track performance, motivate the right behaviours, recognise achievements, and deliver rewards—all without switching between multiple tools.
-                    </p>
-                    <p>
-                        <strong>BigCity&apos;s Loyalty Platform</strong> brings all of these capabilities together in one place. Brands can onboard participants, track sales and target achievement, launch contests and gamified challenges, push real-time communications and nudges, recognise milestones, issue instant rewards, manage approvals, validate claims, and access live dashboards through a single platform.
-                    </p>
+                    <div className="space-y-6">
+                        <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:bg-white hover:shadow-lg transition-all duration-300">
+                            <h4 className="font-bold text-gray-900 mb-2">What are instant rewards in a loyalty program?</h4>
+                            <p className="text-gray-600 text-sm">Instant rewards are digital or fast-fulfilment rewards issued soon after a user completes a desired action, such as a purchase, referral, invoice upload or milestone.</p>
+                        </div>
+                        <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:bg-white hover:shadow-lg transition-all duration-300">
+                            <h4 className="font-bold text-gray-900 mb-2">Do instant rewards work better than physical rewards?</h4>
+                            <p className="text-gray-600 text-sm">Instant rewards work better for speed, repeat engagement and frequent actions. Physical rewards work better for memorability, premium recognition and major milestones.</p>
+                        </div>
+                        <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:bg-white hover:shadow-lg transition-all duration-300">
+                            <h4 className="font-bold text-gray-900 mb-2">Which instant rewards work best for Indian loyalty programs?</h4>
+                            <p className="text-gray-600 text-sm">Digital vouchers, UPI rewards, wallet payouts, prepaid cards, e-gift cards and mobile coupon codes are strong options for Indian loyalty programs.</p>
+                        </div>
+                    </div>
+                </motion.div>
+
+                <hr className="border-gray-200" />
+
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-100px" }}
+                    variants={textVariants}
+                    className="space-y-6"
+                >
                     <div className="p-8 bg-[#0B2149] text-white rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
-                        <h4 className="text-xl font-bold mb-3 text-[#da2929]">The Takeaway</h4>
+                        <h4 className="text-xl font-bold mb-3 text-[#da2929]">Final Takeaway</h4>
                         <p className="text-gray-300">
-                            The most effective sales contests are not standalone campaigns. They are part of a connected sales engagement platform where brands can track performance, engage participants, motivate behaviour, recognise achievements, and reward success from a single interface. That is how organisations build sustained field sales performance—not just short-term contest participation.
+                            Instant rewards help loyalty programs reduce friction, improve participation and connect rewards more directly to user behaviour. The strongest programs balance speed with meaning: instant digital rewards for everyday engagement, and premium rewards for moments that deserve lasting recall.
                         </p>
                     </div>
                 </motion.div>

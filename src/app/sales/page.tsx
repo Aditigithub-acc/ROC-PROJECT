@@ -3,6 +3,7 @@ import SalesBlogContent from "@/Components/SalesBlog/SalesBlogContent";
 import Navbar from "@/Components/Global/Navbar";
 import Footer from "@/Components/Global/Footer";
 import ContactHero from "@/Components/Contact/ContactHero";
+import CTA from "@/Components/Global/CTA";
 
 
 export default function SalesPage() {
@@ -12,6 +13,7 @@ export default function SalesPage() {
             <SalesBlogHero />
             <SalesBlogContent />
             <ContactHero />
+            <CTA />
             <Footer />
 
         </>

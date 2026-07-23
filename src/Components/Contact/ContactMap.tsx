@@ -36,7 +36,7 @@ const ContactMap = () => {
                                 <div className="flex flex-col pt-1">
                                     <span className="text-xs font-bold text-gray-900 uppercase tracking-widest mb-1.5">Email Inquiries</span>
                                     <a href="mailto:info@Gifts-On-Click.in" className="text-[#da2929] font-bold hover:underline transition-all">
-                                        info@Gifts-On-Click.in
+                                        info@giftsonclick.in
                                     </a>
                                 </div>
                             </div>
@@ -67,9 +67,9 @@ const ContactMap = () => {
                                 <div className="flex flex-col pt-1">
                                     <span className="text-xs font-bold text-gray-900 uppercase tracking-widest mb-1.5">HQ Address</span>
                                     <span className="text-gray-600 leading-relaxed max-w-[280px]">
-                                        #1511, First Floor,<br />
-                                        JLPL Industrial Park, Sector 82,<br />
-                                        Mohali (Punjab) INDIA 160055
+                                        A SQUARE TECHNOLOGIES, 1511,<br />
+                                        First Floor, JLPL Industrial Park, Sector 82, Mohali <br />
+                                        (Punjab) INDIA 160055
                                     </span>
                                 </div>
                             </div>

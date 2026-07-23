@@ -28,9 +28,9 @@ const Footer = memo(() => {
                         <div className="flex items-start gap-3 text-sm text-white">
                             <svg className={`w-5 h-5 mt-0.5 shrink-0 ${textGlow}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                             <p className={`leading-relaxed ${textGlow}`}>
-                                G01 - G03, SSR Corporate Park,<br />
-                                13/6, NH-19, Ekta Nagar,<br />
-                                Faridabad, Haryana 121003
+                                A SQUARE TECHNOLOGIES, 1511,First <br />
+                                Floor, JLPL Industrial Park, Sector 82, Mohali <br />
+                                (Punjab) INDIA 160055
                             </p>
                         </div>
                     </div>

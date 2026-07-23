@@ -60,7 +60,7 @@ const CTA = memo(() => {
                                 </div>
                                 <div className="text-left">
                                     <p className="text-[9px] font-black uppercase tracking-[0.2em] text-white/60 mb-0.5">Email Us</p>
-                                    <p className="text-base font-bold">career@support.com</p>
+                                    <p className="text-base font-bold"> info@giftsonclick.in</p>
                                 </div>
                             </Link>
 
@@ -78,7 +78,7 @@ const CTA = memo(() => {
                                 </div>
                                 <div className="text-left">
                                     <p className="text-[9px] font-black uppercase tracking-[0.2em] text-white/60 mb-0.5">WhatsApp</p>
-                                    <p className="text-base font-bold">+1 (234) 567 890</p>
+                                    <p className="text-base font-bold"> (+91) 8194824242</p>
                                 </div>
                             </Link>
 
