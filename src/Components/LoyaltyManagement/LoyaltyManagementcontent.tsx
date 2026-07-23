@@ -5,19 +5,29 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const customersRow1 = [
-    { name: "Idemitsu", logo: "https://placehold.co/200x100?text=Idemitsu" },
-    { name: "Plaza Cables", logo: "https://placehold.co/200x100?text=Plaza+Cables" },
-    { name: "BCH Electric", logo: "https://placehold.co/200x100?text=BCH+Electric" },
-    { name: "Okaya", logo: "https://placehold.co/200x100?text=Okaya" },
-    { name: "KEI Wires", logo: "https://placehold.co/200x100?text=KEI+Wires" },
+    { name: "ACC Cement", logo: "/Logo/acc-cement.jpeg" },
+    { name: "Asian Paints", logo: "/Logo/asian-paints.png" },
+    { name: "Chandigarh University", logo: "/Logo/chandigarh-university.png" },
+    { name: "Hindustan Unilever Limited", logo: "/Logo/hindustan-unilever.jpeg" },
+    { name: "Greystar", logo: "/Logo/greystar.jpeg" },
+    { name: "Netsmartz", logo: "/Logo/netsmartz.jpeg" },
+    { name: "Videocon Connect", logo: "/Logo/videocon.avif" },
+    { name: "Fortis Hospital", logo: "/Logo/fortis-hospitals.png" },
+    { name: "Glenmark", logo: "/Logo/glenmark.png" },
+    { name: "Vodafone Idea", logo: "/Logo/vodafone.png" },
 ];
 
 const customersRow2 = [
-    { name: "Neva", logo: "https://placehold.co/200x100?text=Neva" },
-    { name: "Elixir", logo: "https://placehold.co/200x100?text=Elixir" },
-    { name: "Sirca", logo: "https://placehold.co/200x100?text=Sirca" },
-    { name: "Sylvan", logo: "https://placehold.co/200x100?text=Sylvan" },
-    { name: "TMT", logo: "https://placehold.co/200x100?text=TMT" },
+ { name: "JLPL", logo: "/Logo/jlpl.png" },
+    { name: "Mahindra & Mahindra", logo: "/Logo/mahindra.png" },
+    { name: "Orient Electric", logo: "/Logo/orient-electric.jpeg" },
+    { name: "Rallis India Limited", logo: "/Logo/rallis-india-limited.png" },
+    { name: "SBI", logo: "/Logo/sbi.jpeg" },
+    { name: "SML", logo: "/Logo/sml_ISUZU.jpeg" },
+    { name: "ISUZU", logo: "/Logo/isuzu.png" },
+    { name: "Syngenta India Limited", logo: "/Logo/syngenta.jpeg" },
+    { name: "Venus", logo: "/Logo/venus.png" },
+    { name: "Remedies", logo: "https://placehold.co/200x100?text=Remedies" }
 ];
 
 // Combine into continuous arrays for seamless looping animation
