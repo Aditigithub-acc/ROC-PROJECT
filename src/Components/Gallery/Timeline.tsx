@@ -1,11 +1,13 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 interface TimelineEvent {
     year: string;
     date: string;
     title: string;
+    image: string;
     description: string;
     details: string;
 }
@@ -14,6 +16,7 @@ const timelineEvents: TimelineEvent[] = [
     {
         year: "Retail",
         date: "Customer Loyalty Program",
+        image:"/images/img1.png",
         title: "Omnichannel Loyalty & Rewards Platform",
         description:
             "A growing retail brand wanted to strengthen customer retention by introducing a unified loyalty programme across its online and offline stores.",
@@ -23,6 +26,7 @@ const timelineEvents: TimelineEvent[] = [
     {
         year: "Manuf",
         date: "Channel Partner Rewards",
+        image: "/images/img2.png",
         title: "Dealer Performance Incentive Portal",
         description:
             "A leading manufacturing company needed a transparent incentive programme to motivate dealers and distributors while improving sales visibility across its partner network.",
@@ -32,6 +36,7 @@ const timelineEvents: TimelineEvent[] = [
     {
         year: "Gov",
         date: "GeM Rewards Programme",
+        image: "",
         title: "Public Sector Incentive Platform",
         description:
             "A government organisation required a fully compliant rewards solution that could be procured and managed entirely through the GeM ecosystem.",
@@ -41,6 +46,7 @@ const timelineEvents: TimelineEvent[] = [
     {
         year: "Bank",
         date: "Employee Recognition",
+        image: "",
         title: "Recognition & Rewards Portal",
         description:
             "A private banking institution wanted to create a continuous recognition culture that extended beyond annual performance reviews.",
@@ -50,6 +56,7 @@ const timelineEvents: TimelineEvent[] = [
     {
         year: "Telec",
         date: "Dealer & Channel Incentives",
+        image: "",
         title: "Distribution Rewards Platform",
         description:
             "A national telecom operator required a transparent rewards programme to keep regional distributors engaged and motivated in a highly competitive market.",
@@ -59,6 +66,7 @@ const timelineEvents: TimelineEvent[] = [
     {
         year: "FMCG",
         date: "Sales Incentive Program",
+        image:"",
         title: "National Distributor Incentive Platform",
         description:
             "A leading FMCG brand needed to modernise its incentive programme for a geographically distributed sales network, replacing manual spreadsheet tracking with a faster and more transparent solution.",
@@ -68,6 +76,7 @@ const timelineEvents: TimelineEvent[] = [
     {
         year: "Healthcare",
         date: "Healthcare Rewards Program",
+        image: "",
         title: "Healthcare Professional Engagement Platform",
         description:
             "A healthcare organisation sought a secure and transparent rewards programme to engage healthcare professionals, encourage participation in educational initiatives, and recognise ongoing contributions.",
@@ -80,7 +89,7 @@ export default function Timeline() {
     return (
         <section className="relative py-24 bg-[#fafafa] font-[family-name:var(--font-absans)]">
             <div className="absolute inset-x-0 top-24 h-px bg-slate-200/60" />
-            <div className="max-w-[1200px] mx-auto px-4 lg:px-8">
+            <div className="max-w-[1400px] mx-auto px-4 lg:px-8">
                 <div className="text-center mb-16">
                     <p className="text-sm font-black uppercase tracking-[0.35em] text-[#da2929] mb-4">
                         Our Story
@@ -102,7 +111,7 @@ export default function Timeline() {
                             const card = (
                                 <motion.div
                                     whileHover={{ y: -6 }}
-                                    className="group rounded-[32px] border border-slate-200/80 bg-white shadow-[0_28px_80px_rgba(15,23,42,0.08)] transition-all duration-500 hover:-translate-y-1 hover:border-[#da2929]/30 hover:shadow-[0_35px_120px_rgba(218,41,41,0.16)]"
+                                    className="group rounded-[32px] border border-slate-200/80 bg-white shadow-[0_28px_80px_rgba(15,23,42,0.08)] transition-all duration-500 hover:-translate-y-1 hover:border-[#da2929]/30 hover:shadow-[0_35px_120px_rgba(218,41,41,0.16)] max-w-[1140px] mx-auto"
                                 >
                                     <div className="p-8 lg:p-10 text-left">
                                         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
@@ -112,6 +121,24 @@ export default function Timeline() {
                                             <span className="text-[11px] uppercase tracking-[0.35em] bg-red-50 text-[#da2929] px-3 py-1 rounded-full border border-red-100">
                                                 {item.date}
                                             </span>
+                                        </div>
+                                        <div className="mb-6 overflow-hidden rounded-[24px] border-2 border-dashed border-slate-300 bg-slate-50/80 transition-all duration-500 group-hover:shadow-lg group-hover:border-[#da2929]/40">
+                                            {item.image ? (
+                                                <div className="relative h-56 w-full overflow-hidden rounded-[20px]">
+                                                    <Image
+                                                        src={item.image}
+                                                        alt={item.title}
+                                                        fill
+                                                        sizes="(max-width: 1140px) 100vw, 1140px"
+                                                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                                                    />
+                                                </div>
+                                            ) : (
+                                                <div className="flex h-56 flex-col items-center justify-center gap-3 bg-white transition-transform duration-500 group-hover:scale-[1.01] hover:bg-slate-100">
+                                                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#da2929]/10 text-[#da2929] text-2xl font-black">+</div>
+                                                    <span className="text-sm uppercase tracking-[0.25em] text-slate-500">Image placeholder</span>
+                                                </div>
+                                            )}
                                         </div>
                                         <p className="text-slate-600 leading-8 mb-4">{item.description}</p>
                                         <p className="text-sm text-slate-500 leading-8">{item.details}</p>
