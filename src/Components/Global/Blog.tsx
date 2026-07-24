@@ -7,25 +7,25 @@ import { useRouter } from "next/navigation";
 const blogPosts = [
     {
         id: 1,
-        title: "The Future of Educational Counseling",
-        excerpt: "Discover how AI and personalized data are transforming the way students choose their career paths and find the right universities. Explore the new era of education.",
-        image: "https://placehold.co/600x400/da2929/ffffff?text=Education+Future",
+        title: "Sales Contests That Motivate Everyone",
+        excerpt: "Sales contests should inspire every field sales executive—not just the highest achievers. By rewarding effort, consistency, and improvement, businesses can boost motivation, engagement, and overall team performance.",
+        image: "/images/Sales-contest.png",
         date: "July 12, 2026",
         link: "/sales", // Updated to point to your new SalesBlog page
     },
     {
         id: 2,
-        title: "Top 10 Emerging Career Opportunities",
-        excerpt: "Explore the most promising career fields for the next decade, from sustainable engineering to advanced artificial intelligence. Plan your studies around high-demand skills.",
-        image: "https://placehold.co/600x400/2952da/ffffff?text=Career+Opportunities",
+        title: "The Rise of Instant Rewards",
+        excerpt: "Instant rewards are reshaping loyalty programs by delivering faster recognition, higher engagement, and seamless redemption experiences. Discover why speed has become the key to building lasting customer relationships.",
+        image: "/images/instant-rewards.png",
         date: "June 28, 2026",
         link: "/blogpage2", // Placeholder distinct link
     },
     {
         id: 3,
-        title: "Navigating College Admissions Stress",
-        excerpt: "Practical tips and strategies for high school students and parents to manage the anxiety of the university application process and stay focused on what truly matters.",
-        image: "https://placehold.co/600x400/29da8f/ffffff?text=Stress+Management",
+        title: "Turning Stories Into Customer Experiences",
+        excerpt: "The future of marketing isn't just about telling stories—it's about creating experiences people want to join. Reward-led storytelling encourages participation, builds emotional connections, and makes every interaction more rewarding.",
+        image: "/images/customer-experience.png",
         date: "May 15, 2026",
         link: "/blogpage3", // Placeholder distinct link
     }
